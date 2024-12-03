@@ -1,0 +1,7 @@
+body{
+    justify-content: center;
+    display: flex;
+}
+#can{
+    border:1px solid black;
+}

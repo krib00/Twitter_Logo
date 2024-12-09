@@ -1,7 +1,44 @@
-body{
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+.glavni{
     justify-content: center;
+    align-items: center;
     display: flex;
+    height:100%;
+    width:100%;
+    flex-direction: column;
+}
+.meni{
+    width:100%;
+    min-height:50px;
+    background-color: black;
+}
+.slika{
+    width:520px;
 }
 #can{
     border:1px solid black;
+}
+.knof{
+    display:flex;
+    justify-content: center;
+    margin-top:20px;
+}
+.knof button{
+    border: 1px solid black;
+    height:50px;
+    width:200px;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+}
+.knof button:hover{
+    background-color: rgb(100, 90, 90);
 }

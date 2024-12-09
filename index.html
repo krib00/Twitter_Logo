@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Bezier</title>
   <script src="curve.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body onload="bezier()">
-  <canvas id="can" width="520" height="425"></canvas>
+  <div class="glavni">
+    <div class="meni"></div>
+    <div class="slika">
+      <canvas id="can" width="520" height="425"></canvas>
+      <div class="knof">
+        <button onclick="bezier()">Reload</button>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

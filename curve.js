@@ -1,11 +1,10 @@
 function bezier() {
   const canvas = document.getElementById("can");
   const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before animation
-  
-  // Path data segments
+  ctx.clearRect(0, 0, canvas.width, canvas.height);  // pocisti zaslon oz. canvas
+
   const pathSegments = [
-    { moveTo: [513.0, 52.0], bezierTo: [513.0, 52.44, 513.0, 52.89, 512.76, 53.33] },
+    { moveTo: [513.0, 52.0], bezierTo: [513.0, 52.44, 513.0, 52.89, 512.76, 53.33] }, 
     { bezierTo: [511.7, 54.13, 510.73, 54.81, 510.09, 55.74] },
     { bezierTo: [497.89, 73.28, 483.68, 88.99, 466.52, 101.77] },
     { bezierTo: [461.46, 105.54, 459.77, 109.53, 459.8, 115.77] },
@@ -47,7 +46,6 @@ function bezier() {
     { bezierTo: [495.03, 58.81, 503.95, 55.2, 513.0, 52.0] }
   ];
   
-  // Draw each segment with animation
   let index = 0;
   ctx.beginPath();
 
@@ -59,13 +57,14 @@ function bezier() {
     if (segment.bezierTo) {
       ctx.bezierCurveTo(...segment.bezierTo);
     }
+    ctx.strokeStyle="#1C96E8";
     ctx.stroke();
 
     index++;
     if (index < pathSegments.length) {
-      setTimeout(drawNextSegment, 30); // Adjust delay for speed
+      setTimeout(drawNextSegment, 30); 
     } else {
-      ctx.fillStyle = "red";
+      ctx.fillStyle = "#1C96E8";
       ctx.fill();
     }
   }

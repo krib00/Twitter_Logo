@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+.glavni{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+.meni{
+    width:100%;
+    height:70px;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+}
+.meni button{
+    height:100%;
+    width:200px;
+    cursor: pointer;
+    border:none;
+    background-color: black;
+    color:white;
+    font-size:18px;
+    font-weight: 500;
+}
+.meni button:hover{
+    background-color: rgb(28,150,232);
+    transition-duration: 0.2s;
+}

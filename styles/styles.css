@@ -29,11 +29,14 @@ body, html{
     color:white;
     font-size:18px;
     font-weight: 500;
+    transition-duration: 0.2s;
 }
 .meni button:hover{
     background-color: rgb(28,150,232);
     transition-duration: 0.2s;
-    border:1px solid white;
+    font-size: 21px;
+    border-left:1px white solid;
+    border-right:1px white solid;
 }
 .active {
     background-color: rgb(28,150,232) !important;

@@ -30,8 +30,10 @@
     font-size:17px;
     font-weight: 500;
     font-family:cursive;
+    transition-duration: 0.2s;
 }
 .knofAni button:hover{
     background-color: rgb(28,150,232);
     transition-duration: 0.2s;
+    font-size:19px;
 }

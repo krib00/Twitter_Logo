@@ -4,7 +4,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bezier</title>
-  <script src="curve.js"></script>
+  <script src="js/curve.js"></script>
+  <script src="js/buttons.js"></script>
   <link rel="icon" href="pics/twitter.png" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/page1.css">
@@ -13,16 +14,16 @@
 <body onload="bezier()">
   <div class="glavni">
     <div class="meni">
-      <button>Bezier</button>
-      <button>SVG</button>
-      <button>PNG</button>
-      <button>Vizitka</button>
+      <button id="btnBezier" class="active">Bezier</button>
+      <button id="btnSVG">SVG</button>
+      <button id="btnPNG">PNG</button>
+      <button id="btnVizitka">Vizitka</button>
     </div>
     <div class="slika1">
       <div class="spanCont1">
         <span>Bezier Curve</span>
       </div>
-      <canvas id="can" width="520" height="425"></canvas>
+      <canvas id="can" height="425" width="520"></canvas>
       <div class="knofAni">
         <button onclick="bezier()">Animate</button>
       </div>

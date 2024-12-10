@@ -1,0 +1,16 @@
+.slika4{
+    height:100%;
+    width:100%;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.spanCont4{
+    margin-bottom:80px;
+}
+.spanCont4 span{
+    font-size:45px;
+    letter-spacing: 1px;
+    font-family:cursive;
+}

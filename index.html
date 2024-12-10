@@ -6,9 +6,12 @@
   <title>Bezier</title>
   <script src="js/curve.js"></script>
   <script src="js/buttons.js"></script>
+  <script src="js/animate.js"></script>
   <link rel="icon" href="pics/twitter.png" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/page1.css">
+  <link rel="stylesheet" href="styles/page2.css">
+  
   
 </head>  
 <body onload="bezier()">
@@ -19,13 +22,20 @@
       <button id="btnPNG">PNG</button>
       <button id="btnVizitka">Vizitka</button>
     </div>
-    <div class="slika1">
+    
+    <div class="slika1 pageShown" id="page1">
       <div class="spanCont1">
         <span>Bezier Curve</span>
       </div>
       <canvas id="can" height="425" width="520"></canvas>
       <div class="knofAni">
-        <button onclick="bezier()">Animate</button>
+        <button onclick="animation()">Animate</button>
+      </div>
+    </div>
+
+    <div class="slika2" id="page2">
+      <div class="spanCont2">
+        <span>SVG image</span>
       </div>
     </div>
   </div>

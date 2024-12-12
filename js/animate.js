@@ -62,7 +62,7 @@ function animation() {
   
       index++;
       if (index < pathSegments.length) {
-        setTimeout(drawNextSegment, 30); 
+        setTimeout(drawNextSegment, 40); 
       } else {
         ctxAni.fillStyle = "#1C96E8";
         ctxAni.fill();
@@ -71,7 +71,7 @@ function animation() {
     drawNextSegment();
 
     setTimeout(() => {
-        bezier(); // delay za 1.5 sekundi po animaciji se slika zamenja z staticno bezier sliko, da je bolj clean
-      }, 1500);
+        bezier(); // delay za 1.9 sekundi po animaciji se slika zamenja z staticno bezier sliko, da je bolj clean
+      }, 1900);
   }
   

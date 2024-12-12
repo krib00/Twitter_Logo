@@ -57,19 +57,19 @@ function animation() {
       if (segment.bezierTo) {
         ctxAni.bezierCurveTo(...segment.bezierTo);
       }
-      ctxAni.strokeStyle="#1C96E8";
+      ctxAni.strokeStyle="#1DA1F2";
       ctxAni.stroke();
   
       index++;
       if (index < pathSegments.length) {
         setTimeout(drawNextSegment, 40); 
       } else {
-        ctxAni.fillStyle = "#1C96E8";
+        ctxAni.fillStyle = "#1DA1F2";
         ctxAni.fill();
       }
     }
     drawNextSegment();
-
+    
     setTimeout(() => {
         bezier(); // delay za 1.9 sekundi po animaciji se slika zamenja z staticno bezier sliko, da je bolj clean
       }, 1900);

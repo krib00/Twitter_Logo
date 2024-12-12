@@ -48,8 +48,8 @@ function bezier(){
   ctx.bezierCurveTo(467, 66, 477, 64, 486, 61);
   ctx.bezierCurveTo(495, 59, 504, 55, 513, 52);
 
-  ctx.strokeStyle = "#1C96E8";
+  ctx.strokeStyle = "#1DA1F2";
   ctx.stroke(); // narisana pot
-  ctx.fillStyle = "#1C96E8";
+  ctx.fillStyle = "#1DA1F2";
   ctx.fill(); // pobarvana slika
 }

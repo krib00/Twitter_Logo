@@ -1,3 +1,6 @@
+:root {
+    --twitterC: #1DA1F2;
+}
 *{
     margin:0;
     padding:0;
@@ -19,7 +22,7 @@ body, html{
     background-color: black;
     display:flex;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
 }
 .meni button{
     height:100%;
@@ -33,14 +36,12 @@ body, html{
     transition-duration: 0.2s;
 }
 .meni button:hover{
-    background-color: rgb(28,150,232);
+    background-color: rgb(29, 161, 242, 0.5) ;
     transition-duration: 0.2s;
     font-size: 21px;
-    border-left:1px white solid;
-    border-right:1px white solid;
 }
 .active {
-    background-color: rgb(28,150,232) !important;
+    background-color: var(--twitterC) !important;
 }
 .pageShown{
     display:flex !important;

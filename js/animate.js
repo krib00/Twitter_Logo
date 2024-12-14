@@ -1,10 +1,11 @@
 function animation() {
-    const canvasAni = document.getElementById("can");
+    const canvasAni = document.getElementById("canv");
     const ctxAni = canvasAni.getContext("2d");
     ctxAni.clearRect(0, 0, canvasAni.width, canvasAni.height);  // pocisti zaslon oz. canvas
   
     const pathSegments = [
-      { moveTo: [513, 52], bezierTo: [513, 52, 513, 53, 513, 53] },
+      { moveTo: [513, 52] },
+      { bezierTo: [513, 52, 513, 53, 513, 53] },
       { bezierTo: [512, 54, 511, 55, 510, 56] },
       { bezierTo: [498, 73, 484, 89, 467, 102] },
       { bezierTo: [461, 106, 460, 110, 460, 116] },
@@ -57,14 +58,14 @@ function animation() {
       if (segment.bezierTo) {
         ctxAni.bezierCurveTo(...segment.bezierTo);
       }
-      ctxAni.strokeStyle="#1DA1F2";
+      ctxAni.strokeStyle="rgb(3, 169, 244)";
       ctxAni.stroke();
   
       index++;
       if (index < pathSegments.length) {
         setTimeout(drawNextSegment, 40); 
       } else {
-        ctxAni.fillStyle = "#1DA1F2";
+        ctxAni.fillStyle = "rgb(3, 169, 244)";
         ctxAni.fill();
       }
     }

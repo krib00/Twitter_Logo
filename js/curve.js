@@ -1,5 +1,5 @@
 function bezier(){
-  const canvas = document.getElementById("can");
+  const canvas = document.getElementById("canv");
   const ctx = canvas.getContext("2d");
   
   ctx.clearRect(0, 0, canvas.width, canvas.height); // pocisti zaslon
@@ -48,8 +48,8 @@ function bezier(){
   ctx.bezierCurveTo(467, 66, 477, 64, 486, 61);
   ctx.bezierCurveTo(495, 59, 504, 55, 513, 52);
 
-  ctx.strokeStyle = "#1DA1F2";
+  ctx.strokeStyle = "rgb(3, 169, 244)";
   ctx.stroke(); // narisana pot
-  ctx.fillStyle = "#1DA1F2";
+  ctx.fillStyle = "rgb(3, 169, 244)";
   ctx.fill(); // pobarvana slika
 }

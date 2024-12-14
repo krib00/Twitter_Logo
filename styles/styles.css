@@ -1,5 +1,5 @@
 :root {
-    --twitterC: #1DA1F2;
+    --twitterC: rgb(3, 169, 244);
 }
 *{
     margin:0;
@@ -23,6 +23,7 @@ body, html{
     display:flex;
     justify-content: center;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+    z-index:10;
 }
 .meni button{
     height:100%;
@@ -36,7 +37,7 @@ body, html{
     transition-duration: 0.2s;
 }
 .meni button:hover{
-    background-color: rgb(29, 161, 242, 0.5) ;
+    background-color: rgb(3, 169, 244, 0.6) ;
     transition-duration: 0.2s;
     font-size: 21px;
 }

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnSVG = document.getElementById('btnSVG');
     const btnVizitka = document.getElementById('btnVizitka');
 
-    const page1 = document.getElementById('page1');
+    const page1 = document.getElementById('pageMain');
     const page2 = document.getElementById('page2');
     const page3 = document.getElementById('page3');
     const page4 = document.getElementById('page4');

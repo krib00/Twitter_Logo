@@ -1,55 +1,67 @@
-function bezier(){
+function bezier() {
   const canvas = document.getElementById("canv");
   const ctx = canvas.getContext("2d");
-  
-  ctx.clearRect(0, 0, canvas.width, canvas.height); // pocisti zaslon
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.beginPath();
-  ctx.moveTo(513, 52);
+  ctx.moveTo(252, 132); 
 
-  ctx.bezierCurveTo(513, 52, 513, 53, 513, 53);
-  ctx.bezierCurveTo(512, 54, 511, 55, 510, 56);
-  ctx.bezierCurveTo(498, 73, 484, 89, 467, 102);
-  ctx.bezierCurveTo(461, 106, 460, 110, 460, 116);
-  ctx.bezierCurveTo(460, 128, 459, 140, 458, 151);
-  ctx.bezierCurveTo(457, 163, 455, 174, 453, 186);
-  ctx.bezierCurveTo(446, 216, 434, 245, 419, 271);
-  ctx.bezierCurveTo(404, 297, 386, 322, 363, 341);
-  ctx.bezierCurveTo(351, 352, 338, 362, 325, 371);
-  ctx.bezierCurveTo(307, 384, 288, 393, 267, 400);
-  ctx.bezierCurveTo(252, 405, 236, 409, 221, 412);
-  ctx.bezierCurveTo(209, 414, 197, 416, 185, 417);
-  ctx.bezierCurveTo(169, 417, 152, 417, 136, 416);
-  ctx.bezierCurveTo(122, 415, 108, 413, 95, 410);
-  ctx.bezierCurveTo(68, 403, 42, 393, 18, 380);
-  ctx.bezierCurveTo(13, 377, 8, 374, 3, 371);
-  ctx.bezierCurveTo(60, 376, 110, 362, 156, 327);
-  ctx.bezierCurveTo(133, 327, 113, 320, 96, 306);
-  ctx.bezierCurveTo(79, 293, 66, 276, 59, 254);
-  ctx.bezierCurveTo(75, 257, 89, 257, 104, 253);
-  ctx.bezierCurveTo(49, 239, 20, 188, 24, 150);
-  ctx.bezierCurveTo(31, 152, 38, 155, 45, 157);
-  ctx.bezierCurveTo(52, 160, 60, 161, 67, 162);
-  ctx.bezierCurveTo(68, 162, 68, 162, 68, 161);
-  ctx.bezierCurveTo(46, 145, 32, 124, 26, 98);
-  ctx.bezierCurveTo(21, 71, 24, 46, 38, 22);
-  ctx.bezierCurveTo(95, 89, 165, 125, 252, 132);
-  ctx.bezierCurveTo(252, 129, 252, 128, 252, 128);
-  ctx.bezierCurveTo(249, 113, 250, 98, 253, 84);
-  ctx.bezierCurveTo(258, 65, 267, 48, 280, 34);
-  ctx.bezierCurveTo(290, 24, 302, 16, 315, 11);
-  ctx.bezierCurveTo(337, 3, 358, 2, 380, 7);
-  ctx.bezierCurveTo(399, 11, 415, 20, 428, 34);
-  ctx.bezierCurveTo(430, 35, 432, 36, 434, 36);
-  ctx.bezierCurveTo(455, 31, 474, 24, 493, 14);
-  ctx.bezierCurveTo(494, 13, 496, 12, 498, 11);
-  ctx.bezierCurveTo(490, 35, 476, 53, 455, 68);
-  ctx.bezierCurveTo(456, 68, 457, 68, 458, 68);
-  ctx.bezierCurveTo(467, 66, 477, 64, 486, 61);
-  ctx.bezierCurveTo(495, 59, 504, 55, 513, 52);
+  ctx.bezierCurveTo(256, 111, 269, 92, 269, 92);
+  ctx.bezierCurveTo(269, 92, 287, 68, 311, 58);
+  ctx.bezierCurveTo(337, 45, 368, 49, 368, 49);
+  ctx.bezierCurveTo(368, 49, 387, 53, 403, 61);
+  ctx.bezierCurveTo(420, 69, 431, 82, 431, 82);
+  ctx.bezierCurveTo(431, 82, 449, 78, 465, 72);
+  ctx.bezierCurveTo(477, 68, 488, 62, 493, 59);
+  ctx.bezierCurveTo(496, 57, 497, 57, 497, 57);
+  ctx.bezierCurveTo(497, 57, 494, 71, 483, 85);
+  ctx.bezierCurveTo(472, 100, 452, 114, 452, 114);
+  ctx.bezierCurveTo(452, 114, 466, 112, 479, 109);
+  ctx.bezierCurveTo(495, 105, 511, 98, 511, 98);
+  ctx.bezierCurveTo(511, 98, 506, 106, 498, 115);
+  ctx.bezierCurveTo(495, 119, 492, 123, 488, 127);
+  ctx.bezierCurveTo(483, 132, 478, 137, 473, 141);
+  ctx.bezierCurveTo(465, 147, 459, 151, 459, 151);
+  ctx.bezierCurveTo(459, 151, 460, 170, 458, 198);
+  ctx.bezierCurveTo(457, 200, 457, 203, 457, 206);
+  ctx.bezierCurveTo(456, 211, 456, 217, 454, 223);
+  ctx.bezierCurveTo(450, 239, 446, 259, 437, 277);
+  ctx.bezierCurveTo(435, 284, 432, 289, 429, 296);
+  ctx.bezierCurveTo(427, 301, 425, 305, 422, 310);
+  ctx.bezierCurveTo(396, 362, 342, 405, 342, 405);
+  ctx.bezierCurveTo(342, 405, 329, 414, 318, 421);
+  ctx.bezierCurveTo(314, 423, 308, 427, 308, 427);
+  ctx.bezierCurveTo(308, 427, 294, 435, 275, 443);
+  ctx.bezierCurveTo(258, 449, 241, 454, 241, 454);
+  ctx.bezierCurveTo(241, 454, 207, 462, 172, 464);
+  ctx.bezierCurveTo(143, 464, 118, 461, 118, 461);
+  ctx.bezierCurveTo(118, 461, 75, 455, 45, 440);
+  ctx.bezierCurveTo(21, 431, 3, 418, 3, 418);
+  ctx.bezierCurveTo(3, 418, 47, 421, 84, 410);
+  ctx.bezierCurveTo(100, 405, 117, 398, 129, 391);
+  ctx.bezierCurveTo(146, 382, 155, 373, 155, 373);
+  ctx.bezierCurveTo(155, 373, 115, 373, 91, 349);
+  ctx.bezierCurveTo(67, 331, 58, 301, 58, 301);
+  ctx.bezierCurveTo(57, 302, 62, 302, 68, 302);
+  ctx.bezierCurveTo(72, 302, 78, 302, 83, 302);
+  ctx.bezierCurveTo(104, 301, 104, 298, 104, 298);
+  ctx.bezierCurveTo(104, 298, 95, 296, 84, 292);
+  ctx.bezierCurveTo(70, 286, 55, 274, 45, 262);
+  ctx.bezierCurveTo(20, 232, 21, 195, 21, 195);
+  ctx.bezierCurveTo(21, 195, 31, 200, 42, 204);
+  ctx.bezierCurveTo(57, 208, 68, 208, 68, 208);
+  ctx.bezierCurveTo(69, 208, 59, 200, 47, 188);
+  ctx.bezierCurveTo(40, 179, 30, 166, 27, 152);
+  ctx.bezierCurveTo(12, 100, 36, 68, 36, 68);
+  ctx.bezierCurveTo(36, 68, 69, 111, 124, 141);
+  ctx.bezierCurveTo(134, 147, 146, 152, 157, 156);
+  ctx.bezierCurveTo(167, 160, 181, 165, 191, 168);
+  ctx.bezierCurveTo(226, 177, 252, 177, 252, 177);
+  ctx.bezierCurveTo(252, 178, 248, 154, 252, 132);
 
   ctx.strokeStyle = "rgb(3, 169, 244)";
-  ctx.stroke(); // narisana pot
+  ctx.stroke(); 
   ctx.fillStyle = "rgb(3, 169, 244)";
-  ctx.fill(); // pobarvana slika
+  ctx.fill();
 }

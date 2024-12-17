@@ -1,78 +1,88 @@
 function animation() {
-    const canvasAni = document.getElementById("canv");
-    const ctxAni = canvasAni.getContext("2d");
-    ctxAni.clearRect(0, 0, canvasAni.width, canvasAni.height);  // pocisti zaslon oz. canvas
-  
-    const pathSegments = [
-      { moveTo: [513, 52] },
-      { bezierTo: [513, 52, 513, 53, 513, 53] },
-      { bezierTo: [512, 54, 511, 55, 510, 56] },
-      { bezierTo: [498, 73, 484, 89, 467, 102] },
-      { bezierTo: [461, 106, 460, 110, 460, 116] },
-      { bezierTo: [460, 128, 459, 140, 458, 151] },
-      { bezierTo: [457, 163, 455, 174, 453, 186] },
-      { bezierTo: [446, 216, 434, 245, 419, 271] },
-      { bezierTo: [404, 297, 386, 322, 363, 341] },
-      { bezierTo: [351, 352, 338, 362, 325, 371] },
-      { bezierTo: [307, 384, 288, 393, 267, 400] },
-      { bezierTo: [252, 405, 236, 409, 221, 412] },
-      { bezierTo: [209, 414, 197, 416, 185, 417] },
-      { bezierTo: [169, 417, 152, 417, 136, 416] },
-      { bezierTo: [122, 415, 108, 413, 95, 410] },
-      { bezierTo: [68, 403, 42, 393, 18, 380] },
-      { bezierTo: [13, 377, 8, 374, 3, 371] },
-      { bezierTo: [60, 376, 110, 362, 156, 327] },
-      { bezierTo: [133, 327, 113, 320, 96, 306] },
-      { bezierTo: [79, 293, 66, 276, 59, 254] },
-      { bezierTo: [75, 257, 89, 257, 104, 253] },
-      { bezierTo: [49, 239, 20, 188, 24, 150] },
-      { bezierTo: [31, 152, 38, 155, 45, 157] },
-      { bezierTo: [52, 160, 60, 161, 67, 162] },
-      { bezierTo: [68, 162, 68, 162, 68, 161] },
-      { bezierTo: [46, 145, 32, 124, 26, 98] },
-      { bezierTo: [21, 71, 24, 46, 38, 22] },
-      { bezierTo: [95, 89, 165, 125, 252, 132] },
-      { bezierTo: [252, 129, 252, 128, 252, 128] },
-      { bezierTo: [249, 113, 250, 98, 253, 84] },
-      { bezierTo: [258, 65, 267, 48, 280, 34] },
-      { bezierTo: [290, 24, 302, 16, 315, 11] },
-      { bezierTo: [337, 3, 358, 2, 380, 7] },
-      { bezierTo: [399, 11, 415, 20, 428, 34] },
-      { bezierTo: [430, 35, 432, 36, 434, 36] },
-      { bezierTo: [455, 31, 474, 24, 493, 14] },
-      { bezierTo: [494, 13, 496, 12, 498, 11] },
-      { bezierTo: [490, 35, 476, 53, 455, 68] },
-      { bezierTo: [456, 68, 457, 68, 458, 68] },
-      { bezierTo: [467, 66, 477, 64, 486, 61] },
-      { bezierTo: [495, 59, 504, 55, 513, 52] }
-    ];
-    
-    let index = 0;
-    ctxAni.beginPath();
-  
-    function drawNextSegment() {
+  const canvasAni = document.getElementById("canv");
+  const ctxAni = canvasAni.getContext("2d");
+  ctxAni.clearRect(0, 0, canvasAni.width, canvasAni.height);
+
+  const pathSegments = [
+    { moveTo: [252, 132] },
+    { bezierTo: [256, 111, 269, 92, 269, 92] },
+    { bezierTo: [269, 92, 287, 68, 311, 58] },
+    { bezierTo: [337, 45, 368, 49, 368, 49] },
+    { bezierTo: [368, 49, 387, 53, 403, 61] },
+    { bezierTo: [420, 69, 431, 82, 431, 82] },
+    { bezierTo: [431, 82, 449, 78, 465, 72] },
+    { bezierTo: [477, 68, 488, 62, 493, 59] },
+    { bezierTo: [496, 57, 497, 57, 497, 57] },
+    { bezierTo: [497, 57, 494, 71, 483, 85] },
+    { bezierTo: [472, 100, 452, 114, 452, 114] },
+    { bezierTo: [452, 114, 466, 112, 479, 109] },
+    { bezierTo: [495, 105, 511, 98, 511, 98] },
+    { bezierTo: [511, 98, 506, 106, 498, 115] },
+    { bezierTo: [495, 119, 492, 123, 488, 127] },
+    { bezierTo: [483, 132, 478, 137, 473, 141] },
+    { bezierTo: [465, 147, 459, 151, 459, 151] },
+    { bezierTo: [459, 151, 460, 170, 458, 198] },
+    { bezierTo: [457, 200, 457, 203, 457, 206] },
+    { bezierTo: [456, 211, 456, 217, 454, 223] },
+    { bezierTo: [450, 239, 446, 259, 437, 277] },
+    { bezierTo: [435, 284, 432, 289, 429, 296] },
+    { bezierTo: [427, 301, 425, 305, 422, 310] },
+    { bezierTo: [396, 362, 342, 405, 342, 405] },
+    { bezierTo: [342, 405, 329, 414, 318, 421] },
+    { bezierTo: [314, 423, 308, 427, 308, 427] },
+    { bezierTo: [308, 427, 294, 435, 275, 443] },
+    { bezierTo: [258, 449, 241, 454, 241, 454] },
+    { bezierTo: [241, 454, 207, 462, 172, 464] },
+    { bezierTo: [143, 464, 118, 461, 118, 461] },
+    { bezierTo: [118, 461, 75, 455, 45, 440] },
+    { bezierTo: [21, 431, 3, 418, 3, 418] },
+    { bezierTo: [3, 418, 47, 421, 84, 410] },
+    { bezierTo: [100, 405, 117, 398, 129, 391] },
+    { bezierTo: [146, 382, 155, 373, 155, 373] },
+    { bezierTo: [155, 373, 115, 373, 91, 349] },
+    { bezierTo: [67, 331, 58, 301, 58, 301] },
+    { bezierTo: [57, 302, 62, 302, 68, 302] },
+    { bezierTo: [72, 302, 78, 302, 83, 302] },
+    { bezierTo: [104, 301, 104, 298, 104, 298] },
+    { bezierTo: [104, 298, 95, 296, 84, 292] },
+    { bezierTo: [70, 286, 55, 274, 45, 262] },
+    { bezierTo: [20, 232, 21, 195, 21, 195] },
+    { bezierTo: [21, 195, 31, 200, 42, 204] },
+    { bezierTo: [57, 208, 68, 208, 68, 208] },
+    { bezierTo: [69, 208, 59, 200, 47, 188] },
+    { bezierTo: [40, 179, 30, 166, 27, 152] },
+    { bezierTo: [12, 100, 36, 68, 36, 68] },
+    { bezierTo: [36, 68, 69, 111, 124, 141] },
+    { bezierTo: [134, 147, 146, 152, 157, 156] },
+    { bezierTo: [167, 160, 181, 165, 191, 168] },
+    { bezierTo: [226, 177, 252, 177, 252, 177] },
+    { bezierTo: [252, 178, 248, 154, 252, 132] }
+];
+  let index = 0;
+  ctxAni.beginPath();
+
+  function drawNextSegment() {
       const segment = pathSegments[index];
       if (segment.moveTo) {
-        ctxAni.moveTo(...segment.moveTo);
+          ctxAni.moveTo(...segment.moveTo);
       }
       if (segment.bezierTo) {
-        ctxAni.bezierCurveTo(...segment.bezierTo);
+          ctxAni.bezierCurveTo(...segment.bezierTo);
       }
-      ctxAni.strokeStyle="rgb(3, 169, 244)";
+      ctxAni.strokeStyle = "rgb(3, 169, 244)";
       ctxAni.stroke();
-  
+
       index++;
       if (index < pathSegments.length) {
-        setTimeout(drawNextSegment, 40); 
+          setTimeout(drawNextSegment, 30); 
       } else {
-        ctxAni.fillStyle = "rgb(3, 169, 244)";
-        ctxAni.fill();
+          ctxAni.fillStyle = "rgb(3, 169, 244)";
+          ctxAni.fill(); 
       }
-    }
-    drawNextSegment();
-    
-    setTimeout(() => {
-        bezier(); // delay za 1.9 sekundi po animaciji se slika zamenja z staticno bezier sliko, da je bolj clean
-      }, 1900);
   }
-  
+  drawNextSegment();
+
+  setTimeout(() => {
+    bezier(); // delay za 2 sekundi po animaciji se slika zamenja z staticno bezier sliko, da je bolj clean
+  }, 2000);
+}

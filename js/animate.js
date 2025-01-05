@@ -1,9 +1,8 @@
-let isAnimating = false; 
-
+let isAnimating = false;
 function animation() {
   if (isAnimating) return;  // če je isAnimatin true se nič ne zgodi, v primerui da je false, se začne proces risanja
 
-  isAnimating = true; 
+  isAnimating = true;
   const canvasAni = document.getElementById("canv");
   const ctxAni = canvasAni.getContext("2d");
   ctxAni.clearRect(0, 0, canvasAni.width, canvasAni.height); // pocisti zaslon v primeru, če je kaj narisano od prej
@@ -64,45 +63,72 @@ function animation() {
     { bezierTo: [252, 178, 248, 154, 252, 132] }
   ];
 
-  const drawSpeed = 0.1; // hitrost risanja
   let index = 0;
-  let t = 0; // t predstavlja čas, ko pride do 1, se segment konča in se prične novi
+  let t = 0;
+  let segmentLength = 0;
+  let currentPoint = [252, 132];
+
   ctxAni.beginPath();
 
-  drawNextSegment(); // se izvede funkcija odspodi
+  drawNextSegment();
+
+  function calculateBezierLength([x0, y0], [cp1x, cp1y, cp2x, cp2y, x, y], steps = 10) {
+    let length = 0;
+    let prevX = x0;
+    let prevY = y0;
+
+    for (let i = 1; i <= steps; i++) {
+      const t = i / steps;
+      const cx = (1 - t) ** 3 * x0 + 3 * (1 - t) ** 2 * t * cp1x + 3 * (1 - t) * t ** 2 * cp2x + t ** 3 * x;
+      const cy = (1 - t) ** 3 * y0 + 3 * (1 - t) ** 2 * t * cp1y + 3 * (1 - t) * t ** 2 * cp2y + t ** 3 * y;
+
+      length += Math.sqrt((cx - prevX) ** 2 + (cy - prevY) ** 2);
+      prevX = cx;
+      prevY = cy;
+    }
+
+    return length;
+  }
+
   function drawNextSegment() {
     const segment = pathSegments[index];
 
-    if (segment.moveTo) { // ce segment  vsebuje moveTo komando, premakne risalni kurzor na kordinate določene v segmentu
+    if (segment.moveTo) {
       ctxAni.moveTo(...segment.moveTo);
+      currentPoint = segment.moveTo;
       t = 0;
-      index++; // nov index, da pride nov segment na vrsto
+      index++;
+    } else if (segment.bezierTo) {
+      const [cp1x, cp1y, cp2x, cp2y, x, y] = segment.bezierTo;
+      const [x0, y0] = currentPoint;
 
-    } else if (segment.bezierTo) { // ce vsebuje bezierTo komando se zgodi naslednje:
-      const [cp1x, cp1y, cp2x, cp2y, x, y] = segment.bezierTo; // se kordinati za bezier shranijo v posamezne spremenljivke, cp1 = zač točka, cp2 = druga točka, x,y a zadne točka
-      const start = ctxAni.currentX && ctxAni.currentY ? [ctxAni.currentX, ctxAni.currentY] : ctxAni.__currentPoint || [252, 132];
-      const [x0, y0] = start;
+      if (t === 0) {
+        // Izračunaj dolžino trenutnega segmenta
+        segmentLength = calculateBezierLength(currentPoint, [cp1x, cp1y, cp2x, cp2y, x, y]);
+      }
 
-      const cx = (1 - t)**3 * x0 + 3 * (1 - t)**2 * t * cp1x + 3 * (1 - t) * t * t * cp2x + t**3 * x; // Formula za Bezier Curve kordinato X
-      const cy = (1 - t)**3 * y0 + 3 * (1 - t)**2 * t * cp1y + 3 * (1 - t) * t * t * cp2y + t**3 * y; // Formula za Bezier Curve kordinato Y
+      const tIncrement = window.speed / segmentLength;
+      t = Math.min(t + tIncrement, 1); // Poskrbi, da `t` ne preseže 1
 
-      ctxAni.bezierCurveTo(cx, cy, cx, cy, cx, cy); // RISANJE - preko tega vidimo animacijo, use tocke so iste, zato da se prikaže tenka črta za lep prikaz
+      const cx = (1 - t) ** 3 * x0 + 3 * (1 - t) ** 2 * t * cp1x + 3 * (1 - t) * t ** 2 * cp2x + t ** 3 * x;
+      const cy = (1 - t) ** 3 * y0 + 3 * (1 - t) ** 2 * t * cp1y + 3 * (1 - t) * t ** 2 * cp2y + t ** 3 * y;
+
+      ctxAni.bezierCurveTo(cx, cy, cx, cy, cx, cy);
       ctxAni.strokeStyle = "rgb(3, 169, 244)";
       ctxAni.stroke();
-      t += drawSpeed;
 
-      if (t >= 1) { // ce je t ena se konča risanje segmenta in se prične novi
-        ctxAni.__currentPoint = [x, y]; // trenutna točka (konec bezier curva) se shrani v canvas komando currentpoint.!!!! (ČE TEGA NI, PROGRAM NE VE KJE SE SEGMENT KONČA, IN KO SE RIŠE NOV SEGMENT SE BO ZAČEL RISATI VEDNO IZ ISTE TOČKE IN JE ANIMACIJA POPAČENA)
+      if (t >= 1) {
+        currentPoint = [x, y];
         index++;
         t = 0;
       }
     }
 
-    if (index < pathSegments.length) { // če risanje NI končano, pokliče metodo za
-      requestAnimationFrame(drawNextSegment); // poklice metodo preden se screen updejta, tako ostane animacija smooth
+    if (index < pathSegments.length) {
+      requestAnimationFrame(drawNextSegment);
     } else {
-      isAnimating = false; // boolean, postane false, da se animacija lahko ponovno predvaja, če uporabnik klikne na gumb
-      bezier(); // po koncani animaciji, se slika zamenja s prvotno
+      bezier();
+      isAnimating = false;
     }
   }
 }

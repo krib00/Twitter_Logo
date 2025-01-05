@@ -39,7 +39,7 @@ body, html{
 .meni button:hover{
     background-color: rgb(3, 169, 244, 0.6) ;
     transition-duration: 0.2s;
-    font-size: 21px;
+    font-size: 19px;
 }
 .active {
     background-color: var(--twitterC) !important;

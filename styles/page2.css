@@ -19,4 +19,5 @@
 .slika2 svg{
     height:425;
     width:520px;
+    fill:var(--twitterC);
 }

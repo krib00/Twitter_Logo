@@ -1,0 +1,133 @@
+.modalShown{
+    display:flex !important;
+}
+.speedModal{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(63, 98, 116, 0.6);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; 
+    user-select: none;
+}
+.banana{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:400px;
+    width:600px;
+    background-color: white;
+    border-radius:16px;
+}
+.banana span{
+    font-size:25px;
+    font-family:cursive;
+}
+.speedInp{
+    margin-top: 50px;
+    margin-bottom:10px;
+    width:250px;
+    cursor: pointer;
+}
+.output{
+    width:250px;
+    height:50px;
+    margin-bottom:50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family:sans-serif;
+}
+.okej{
+    border: none;
+    height:50px;
+    width:250px;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+    border-radius:20px;
+    font-size:17px;
+    font-weight: 500;
+    font-family:cursive;
+    transition-duration: 0.2s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.okej:hover{
+    background-color: var(--twitterC);
+    transition-duration: 0.2s;
+    font-size:19px;
+}
+
+.colorModal{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(63, 98, 116, 0.6);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; 
+    user-select: none;
+}
+.innerColorModal{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:400px;
+    width:600px;
+    background-color: white;
+    border-radius:16px;
+}
+.innerColorModal span{
+    font-size:25px;
+    font-family:cursive;
+}
+.colorInput{
+    margin-top: 50px;
+    margin-bottom:10px;
+    width:250px;
+    cursor: pointer;
+}
+.outputColor{
+    width:250px;
+    height:50px;
+    margin-bottom:50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family:sans-serif;
+}
+.okejColor{
+    border: none;
+    height:50px;
+    width:250px;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+    border-radius:20px;
+    font-size:17px;
+    font-weight: 500;
+    font-family:cursive;
+    transition-duration: 0.2s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.okejColor:hover{
+    background-color: var(--twitterC);
+    transition-duration: 0.2s;
+    font-size:19px;
+}
+

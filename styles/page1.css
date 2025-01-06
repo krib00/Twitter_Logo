@@ -4,8 +4,17 @@
     display:none;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
+}
+.left{
+    display:flex;
+}
+.right{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    margin-left:50px;
 }
 .spanCont1{
     top:45px;
@@ -16,7 +25,7 @@
     letter-spacing: 1px;
     font-family:cursive;
 }
-.animationBtn, .speedBtn{
+.animationBtn, .speedBtn, .colorBtn{
     border: none;
     height:50px;
     width:250px;
@@ -30,7 +39,7 @@
     transition-duration: 0.2s;
     margin-top:5px;
 }
-.animationBtn:hover, .speedBtn:hover{
+.animationBtn:hover, .speedBtn:hover, .colorBtn:hover{
     background-color: var(--twitterC);
     transition-duration: 0.2s;
     font-size:19px;

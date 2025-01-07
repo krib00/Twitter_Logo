@@ -1,9 +1,7 @@
 let modal;
-let modalColor;
 document.addEventListener('DOMContentLoaded', function () {
 
     modal = document.querySelector(".speedModal");
-    modalColor = document.querySelector(".colorModal");
     const range = document.querySelector('.speedInp');
     const output = document.querySelector('.output');
     output.textContent = 'Medium'; // default, se izve samo enkrat, na začetku
@@ -48,12 +46,5 @@ function openSpeed() {
 }
 function closeSpeed() {
     modal.classList.remove("modalShown");
-}
-
-function openColor() {
-    modalColor.classList.add("modalShown");
-}
-function closeColor() {
-    modalColor.classList.remove("modalShown");
 }
 

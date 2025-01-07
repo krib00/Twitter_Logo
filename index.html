@@ -36,38 +36,28 @@
       <div class="right">
         <button class="animationBtn" onclick="animation()">Animate</button>
         <button class="speedBtn" onclick="openSpeed()">Speed</button>
-        <button class="colorBtn" onclick="openColor()">Color</button>
-      </div>
+        
+        <button class="colorBtn">Color<input type="color"></button>
 
-
-
-      <div class="speedModal">
-        <div class="banana">
-          <span>Select animation speed:</span>
-          <input class="speedInp" type="range" min="1" max="5" step="1" value="3">
-          <div class="output"></div>
-          <div class="okej" onclick="closeSpeed()">OK</div>
+        <div class="speedModal">
+          <div class="banana">
+            <span>Select animation speed:</span>
+            <input class="speedInp" type="range" min="1" max="5" step="1" value="3">
+            <div class="output"></div>
+            <div class="okej" onclick="closeSpeed()">Close</div>
+          </div>
         </div>
       </div>
 
-      <div class="colorModal">
-        <div class="innerColorModal">
-          <span>Select color:</span>
-          <input type="color" class="colorInput">
-          <div class="outputColor"></div>
-          <div class="okejColor" onclick="closeColor()">OK</div>
-        </div>
+
+    </div> <!-- Konec: page 1 -->
+
+    <div class="slika2" id="page2">
+      <div class="spanCont2">
+        <span>SVG image</span>
       </div>
-
-    </div>
-  </div>
-
-  <div class="slika2" id="page2">
-    <div class="spanCont2">
-      <span>SVG image</span>
-    </div>
-    <svg viewBox="0 0 512 422">
-      <path d="M513.000000,52.000008 
+      <svg viewBox="0 0 512 422">
+        <path d="M513.000000,52.000008 
             C513.000000,52.444336 513.000000,52.888672 512.762085,53.332447 
             C511.704163,54.127674 510.727539,54.814587 510.087219,55.735371 
             C497.885315,73.282265 483.677368,88.990326 466.522644,101.774231 
@@ -108,26 +98,27 @@
             C456.418274,67.916901 457.200745,68.128365 457.900360,67.971176 
             C467.228119,65.875397 476.663940,64.139992 485.829712,61.477814 
             C495.028107,58.806183 503.954437,55.197834 513.000000,52.000008" />
-    </svg>
-  </div>
+      </svg>
+    </div>
 
-  <div class="slika3" id="page3">
-    <div class="spanCont3">
-      <span>PNG image</span>
+    <div class="slika3" id="page3">
+      <div class="spanCont3">
+        <span>PNG image</span>
+      </div>
+      <img src="pics/twitter.png" alt="Twitter logo">
     </div>
-    <img src="pics/twitter.png" alt="Twitter logo">
-  </div>
 
-  <div class="slika4" id="page4">
-    <div class="spanCont4">
-      <span>Info</span>
+    <div class="slika4" id="page4">
+      <div class="spanCont4">
+        <span>Info</span>
+      </div>
+      <div class="pCont">
+        <p>Created by: Kristijan Boben</p>
+        <p>Professor: Boštjan Vouk</p>
+        <p>Made with: Html, css and javascript</p>
+      </div>
     </div>
-    <div class="pCont">
-      <p>Created by: Kristijan Boben</p>
-      <p>Professor: Boštjan Vouk</p>
-      <p>Made with: Html, css and javascript</p>
-    </div>
-  </div>
+
   </div>
 </body>
 

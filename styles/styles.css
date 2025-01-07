@@ -18,7 +18,7 @@ body, html{
 }
 .meni{
     width:100%;
-    min-height:6%;
+    min-height:45px;
     background-color: black;
     display:flex;
     justify-content: center;
@@ -37,12 +37,12 @@ body, html{
     transition-duration: 0.2s;
 }
 .meni button:hover{
-    background-color: rgb(3, 169, 244, 0.6) ;
     transition-duration: 0.2s;
-    font-size: 19px;
+    font-size:20px;
 }
 .active {
     background-color: var(--twitterC) !important;
+    font-size:18px !important;
 }
 .pageShown{
     display:flex !important;

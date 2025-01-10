@@ -21,3 +21,40 @@
     width:520px;
     fill:var(--twitterC);
 }
+.svgCont{
+    height:520px;
+    width:520px;
+    display:flex;
+    align-items: center;
+    position: relative;
+}
+.svgCont:hover{
+    transition-duration: 0.2s;
+    background-color: rgba(189, 181, 181, 0.39);
+}
+.picCont2{
+    position:absolute;
+    top:0;
+    right:0;
+    display:none;
+    border-radius:100%;
+    padding:20px;
+    transition-duration: 0.2s;
+}
+.picCont2:hover{
+    background-color: rgba(189, 181, 181, 0.692);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.downTitle2{ /*Napis kadar hoveraš */
+    position: absolute;
+    background-color: #464141fb;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    pointer-events: none;
+    display: none;
+    font-family:sans-serif
+}

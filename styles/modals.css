@@ -2,13 +2,13 @@
     display:flex !important;
 }
 .speedModal{
-    top: 0; 
-    left: 0;
     display: none;
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease; 
     user-select: none;
+    height:100%;
+    position: absolute;
 }
 .banana{
     display:flex;

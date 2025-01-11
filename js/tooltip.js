@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const picCont2 = document.querySelector(".picCont2");
     const tooltip2 = document.createElement("div");
-    tooltip2.className = "downTitle";
+    tooltip2.className = "downTitle2";
     document.body.appendChild(tooltip2);
 
     picCont2.addEventListener("mouseenter", () => {
@@ -42,6 +42,27 @@ document.addEventListener("DOMContentLoaded", () => {
         tooltip2.style.display = "none";
         picCont2.setAttribute("title", tooltip2.textContent);
     });
-    
 
+    // page 3
+
+    const picCont3 = document.querySelector(".picCont3");
+    const tooltip3 = document.createElement("div");
+    tooltip3.className = "downTitle3";
+    document.body.appendChild(tooltip3);
+
+    picCont3.addEventListener("mouseenter", () => {
+        tooltip3.textContent = picCont3.getAttribute("title");
+        tooltip3.style.display = "block"; // prikaz napisa
+        picCont3.removeAttribute("title"); // odstranitev default title attributa, da se ne še enkrat pojavi - lep okras
+    });
+
+    picCont3.addEventListener("mousemove", (event) => { // ko premikas misko, bo napis sledil kurzori
+        tooltip3.style.left = `${event.pageX + 10}px`;
+        tooltip3.style.top = `${event.pageY + 10}px`;
+    });
+
+    picCont3.addEventListener("mouseleave", () => {
+        tooltip3.style.display = "none";
+        picCont3.setAttribute("title", tooltip3.textContent);
+    });
 });

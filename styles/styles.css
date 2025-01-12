@@ -45,7 +45,7 @@ body, html{
     height:100%;
     fill:white;
     transition-duration: 0.2s;
-    justify-content: start;
+    justify-content: center;
 }
 .slikaBtn svg{
     height:30px;
@@ -65,6 +65,7 @@ body, html{
     font-size:18px;
     transition-duration: 0.2s;
     font-family: cursive;
+    border-radius:16px;
 }
 .slikaBtn:hover, .meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover, .meniBtn4:hover{
     transition-duration: 0.2s;
@@ -80,6 +81,7 @@ body, html{
 }
 /* NOGA */
 footer{
+    box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.3);
     background-color: #111;
 }
 .footerContainer{

@@ -13,6 +13,7 @@
     flex-direction: column;
     background-color: var(--twitterC);
     border-top-right-radius: 100px;
+    background-image: linear-gradient(to top right, rgb(20, 46, 95), transparent); /* Apply gradient on top right border */
 }
 .slikaHP{
     gap:30px;
@@ -41,14 +42,6 @@
     flex-direction: column;
     user-select: none;
     background-color: white;
-}
-.maliChirp{
-    height:3.5625rem;
-    padding-bottom:12px;
-    align-self:flex-start;
-    fill:currentColor;
-    color: rgba(231, 233, 234, 1.00);
-    display:none;
 }
 .meniHP h1{
     font-family: twitter1;

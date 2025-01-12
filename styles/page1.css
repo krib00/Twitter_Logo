@@ -3,10 +3,10 @@
     width:100%;
     display:none;
     flex-direction: row;
-    position: relative;
+    position: absolute;
     align-items: center;
     justify-content: center;
-    
+    background-color: white;
 }
 .left{
     display:flex;

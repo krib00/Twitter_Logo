@@ -1,6 +1,14 @@
 :root {
     --twitterC: rgb(3, 169, 244);
 }
+@font-face {
+    font-family: 'twitter1';
+    src: url("..\\fonts\\Arista Light Trial.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'twitter2';
+    src: url("..\\fonts\\PICOBLA_.TTF") format("truetype");
+}
 *{
     margin:0;
     padding:0;
@@ -15,35 +23,111 @@ body, html{
     width:100%;
     display:flex;
     flex-direction: column;
+    position: relative;
+    background-color: var(--twitterC);
 }
 .meni{
+    position: sticky;
+    top: 0; 
+    left: 0; 
+    z-index: 100;
     width:100%;
     min-height:45px;
-    background-color: black;
+    background-color: #111;
     display:flex;
     justify-content: center;
+    align-items: center;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
-    z-index:10;
 }
-.meni button{
+.slikaBtn{
+    display:flex;
+    align-items: center;
+    height:100%;
+    fill:white;
+    transition-duration: 0.2s;
+    justify-content: start;
+}
+.slikaBtn svg{
+    height:30px;
+    width:30px;
+    margin-right:15px;
+}
+.slikaBtn:hover{
+    fill:var(--twitterC);
+}
+.slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4{
     height:100%;
     width:200px;
     cursor: pointer;
     border:none;
-    background-color: black;
+    background-color: #111;
     color:white;
     font-size:18px;
-    font-weight: 500;
     transition-duration: 0.2s;
+    font-family: cursive;
 }
-.meni button:hover{
+.slikaBtn:hover, .meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover, .meniBtn4:hover{
     transition-duration: 0.2s;
-    font-size:20px;
+    text-decoration: underline 2px;
 }
 .active {
-    background-color: var(--twitterC) !important;
-    font-size:18px !important;
+    background-color:white !important;
+    color:#111 !important;
+    text-decoration: none !important;
 }
 .pageShown{
     display:flex !important;
+}
+/* NOGA */
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+    font-family: twitter1;
+    letter-spacing:1.2px;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
 }

@@ -1,0 +1,177 @@
+.homePage{
+    display:none;
+    justify-content: center;
+    min-height: auto;
+    flex: 1 1 auto;
+}
+.levoHP{
+    min-height:45vh;
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--twitterC);
+}
+.slikaHP{
+    gap:30px;
+    display:flex;
+    flex-direction: column;
+    user-select: none;
+}
+.searchIcon, .peopleIcon, .textIcon{
+    color:white;
+    line-height: 70px;
+    font-size:35px;
+    font-family: twitter1;
+    letter-spacing:2px;
+    display:flex; 
+    align-items: center;
+    margin-left:50px;
+}
+.slikaHP span{
+    margin-left:15px;
+}
+.desnoHP{
+    min-width:40vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    border-top-left-radius: 60px;
+    background-color: white;
+}
+.maliChirp{
+    height:3.5625rem;
+    padding-bottom:12px;
+    align-self:flex-start;
+    fill:currentColor;
+    color: rgba(231, 233, 234, 1.00);
+    display:none;
+}
+.meniHP h1{
+    font-family: twitter1;
+    line-height: 80px;
+    font-size: 70px;
+    margin-bottom:48px;
+    margin-top:48px;
+    word-wrap:break-word;
+    letter-spacing:2px;
+    font-weight: 700;
+    color:#111;
+}
+.meniHP h2{
+    font-family:twitter2;
+    font-size:31px;
+    margin-bottom:32px;
+    font-weight:700;
+    line-height:36px;
+    color:#111;
+}
+.google, .apple, .create, .signin{
+    height:40px;
+    width:300px;
+    max-width:380px;
+    border:1px solid;
+    line-height: 20px;
+    border-radius: 9999px;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    font-size:15px;
+    font-weight: 700;
+}
+.google{
+    margin-bottom:16px;
+}
+.google, .apple{
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    color:rgba(0, 0, 0, 0.664);
+}
+.google:hover, .apple:hover{
+    background-color:rgb(230,230,230);
+    transition-duration: 0.2s;
+    color:#111;
+}
+.google svg{
+    height:20px;
+    margin-right:4px;
+    max-width: 100%;
+}
+.apple svg{
+    margin-right: 4px;
+    height:20px;
+}
+.create:hover{
+    background-color: var(--twitterC);
+    transition-duration: 0.2s;
+}
+.signin:hover{
+    background-color: rgb(3,16,24);
+    transition-duration: 0.2s;
+}
+.orBlock{
+    height:20px;
+    max-width:380px;
+    margin:8px -4px 8px -4px;
+    display:flex;
+    align-items: center;
+}
+.orBlock span{
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    margin:auto 4px auto 4px;
+    font-family: cursive;
+    color:rgba(0, 0, 0, 0.664);
+}
+.levaCrta, .desnaCrta{
+    background-color: rgba(0, 0, 0, 0.664);
+    height:1px;
+    width:135px;
+    margin-left:4px;
+    margin-right:4px;
+}
+.create{
+    background-color: var(--twitterC);
+    color:white;
+    margin-bottom:8px;
+    border:none;
+    font-family: cursive;
+}
+.create:hover{
+    background-color: white;
+    border:var(--twitterC) 1px solid;
+    color:var(--twitterC);
+}
+.skatlaRacun{
+    margin-top:40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skatlaRacun span{
+    max-width:380px;
+    line-height:20px;
+    font-size:31px;
+    margin-bottom:40px;
+    font-family: twitter2;
+    color:#111;
+}
+.signin{
+    background-color: white;
+    border:var(--twitterC) 1px solid;
+    margin-bottom:8px;
+    line-height: 20px;
+    font-size:15px;
+    font-family: cursive;
+    color:var(--twitterC);
+}
+.signin:hover{
+    background-color: rgb(3, 169, 244);
+    color:white;
+}

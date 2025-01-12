@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
+<head> 
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bezier</title>
   <script src="js/bezierCurve.js"></script>
@@ -11,6 +12,7 @@
   <script src="js/tooltip.js"></script>
   <link rel="icon" href="pics/twitter.png" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/homePage.css">
   <link rel="stylesheet" href="styles/page1.css">
   <link rel="stylesheet" href="styles/page2.css">
   <link rel="stylesheet" href="styles/page3.css">
@@ -19,32 +21,143 @@
 </head>
 
 <body onload="bezier()">
+  <div class="meni">
+    <button class="slikaBtn">
+      <svg viewBox="0 0 512 422">
+        <path d="M513.000000,52.000008 
+            C513.000000,52.444336 513.000000,52.888672 512.762085,53.332447 
+            C511.704163,54.127674 510.727539,54.814587 510.087219,55.735371 
+            C497.885315,73.282265 483.677368,88.990326 466.522644,101.774231 
+            C461.463013,105.544716 459.774963,109.530739 459.795837,115.770622 
+            C459.835510,127.624939 459.108185,139.528931 457.879761,151.326965 
+            C456.682556,162.824951 455.111908,174.363602 452.563293,185.625977 
+            C445.713196,215.896957 434.425201,244.553131 418.855560,271.411957 
+            C403.748077,297.473572 386.038849,321.612305 363.018250,341.313568 
+            C350.863159,351.715973 338.312927,361.745697 325.274872,371.005615 
+            C307.428986,383.680206 287.773376,393.255402 266.936676,399.889008 
+            C251.828415,404.698853 236.371048,408.586304 220.858032,411.893829 
+            C209.079376,414.405121 197.004013,416.314117 184.995758,416.766113 
+            C168.769592,417.376923 152.429794,417.015869 136.235077,415.794525 
+            C122.283401,414.742371 108.260658,412.796875 94.633842,409.661926 
+            C67.765869,403.480835 42.291973,393.256958 18.094404,379.991760 
+            C13.042077,377.222046 8.222960,374.026917 3.296370,371.027802 
+            C59.714493,375.668640 110.286018,361.496490 155.997711,327.207184 
+            C133.015182,326.722168 113.180527,319.591217 95.838577,306.180603 
+            C78.509415,292.779877 65.626656,276.067810 59.464008,253.694763 
+            C74.809586,257.194916 88.777908,256.530945 104.005737,252.906403 
+            C48.676731,239.097672 20.153994,188.408661 23.649509,149.557816 
+            C30.683895,152.170197 37.678101,155.210175 44.939213,157.340332 
+            C52.260658,159.488190 59.847095,160.732773 67.317429,162.373123 
+            C67.510925,162.005005 67.704422,161.636871 67.897911,161.268753 
+            C45.799084,145.372559 31.598768,124.129601 26.172161,97.682327 
+            C20.756098,71.286461 24.204988,46.044910 38.421688,22.356432 
+            C94.963684,88.928841 165.480026,125.290993 251.976013,131.540207 
+            C251.976013,129.459717 252.152252,128.437851 251.949677,127.497635 
+            C248.778992,112.781891 249.567047,98.139107 253.044891,83.628586 
+            C257.593475,64.650681 266.704254,47.959019 280.486694,34.245956 
+            C290.457733,24.325090 302.102020,16.454544 315.371429,11.215202 
+            C336.620422,2.825150 358.332184,1.644563 380.448792,6.796622 
+            C399.012085,11.120933 415.002930,20.079319 428.390106,33.735115 
+            C429.671692,35.042393 432.289459,36.168213 433.945709,35.808258 
+            C454.542145,31.331963 474.002716,23.727757 492.560425,13.775983 
+            C494.231476,12.879874 495.844238,11.875138 498.190002,10.510048 
+            C490.270905,35.196377 475.650269,53.388008 455.125244,67.847244 
+            C456.418274,67.916901 457.200745,68.128365 457.900360,67.971176 
+            C467.228119,65.875397 476.663940,64.139992 485.829712,61.477814 
+            C495.028107,58.806183 503.954437,55.197834 513.000000,52.000008" />
+      </svg>
+      <span>Home</span>
+    </button>
+    <button class="meniBtn1" id="btnBezier">Bezier</button>
+    <button class="meniBtn2" id="btnSVG">SVG</button>
+    <button class="meniBtn3" id="btnPNG">PNG</button>
+    <button class="meniBtn4" id="btnVizitka">About</button>
+  </div>
   <div class="glavni">
-    <div class="meni">
-      <button id="btnBezier" class="active">Bezier</button>
-      <button id="btnSVG">SVG</button>
-      <button id="btnPNG">PNG</button>
-      <button id="btnVizitka">About</button>
+
+    <div class="homePage pageShown">
+      <div class="levoHP">
+        <div class="slikaHP">
+          <div class="searchIcon">
+            <img src="pics/searchIcon.png" alt="Search icon">
+            <span>Follow your interests.</span>
+          </div>
+          <div class="peopleIcon">
+            <img src="pics/peopleIcon.png" alt="People icon">
+            <span>Hear what people are talking about.</span>
+          </div>
+          <div class="textIcon">
+            <img src="pics/textIcon.png" alt="Text icon">
+            <span>Join the conversation.</span>
+          </div>
+        </div>
+      </div>
+      <div class="desnoHP">
+        <div class="meniHP">
+          <h1>Happening now!</h1>
+          <h2>Join Twitter today.</h2>
+          <button class="google">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <g>
+                <path
+                  d="M18.977 4.322L16 7.3c-1.023-.838-2.326-1.35-3.768-1.35-2.69 0-4.95 1.73-5.74 4.152l-3.44-2.635c1.656-3.387 5.134-5.705 9.18-5.705 2.605 0 4.93.977 6.745 2.56z"
+                  fill="#EA4335"></path>
+                <path
+                  d="M6.186 12c0 .66.102 1.293.307 1.89L3.05 16.533C2.38 15.17 2 13.63 2 12s.38-3.173 1.05-4.533l3.443 2.635c-.204.595-.307 1.238-.307 1.898z"
+                  fill="#FBBC05"></path>
+                <path
+                  d="M18.893 19.688c-1.786 1.667-4.168 2.55-6.66 2.55-4.048 0-7.526-2.317-9.18-5.705l3.44-2.635c.79 2.42 3.05 4.152 5.74 4.152 1.32 0 2.474-.308 3.395-.895l3.265 2.533z"
+                  fill="#34A853"></path>
+                <path
+                  d="M22 12c0 3.34-1.22 5.948-3.107 7.688l-3.265-2.53c1.07-.67 1.814-1.713 2.093-3.063h-5.488V10.14h9.535c.14.603.233 1.255.233 1.86z"
+                  fill="#4285F4"></path>
+              </g>
+            </svg>
+            <span>Sign up with Google</span>
+          </button>
+          <button class="apple">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <g>
+                <path
+                  d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z">
+                </path>
+              </g>
+            </svg>
+            <span>Sign up with Apple</span>
+          </button>
+          <div class="orBlock">
+            <div class="levaCrta"></div>
+            <span>or</span>
+            <div class="desnaCrta"></div>
+          </div>
+          <button class="create">Create account</button>
+          <div class="skatlaRacun">
+            <span>Already have an account?</span>
+            <button class="signin">Sign in</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="slika1 pageShown" id="pageMain">
+    <div class="slika1" id="page1">
       <div class="spanCont1">
         <span>Bezier Curve</span>
       </div>
       <div class="left">
         <div class="canvasCont">
           <canvas id="canv" height="520" width="520"></canvas>
-          <div class="picCont" title="Click to download script.">
-            <a href="pics/bezierCurve.txt" download="pics/bezierCurve.txt">
-              <img src="pics/download-button.png" alt="Download button"></a>
-          </div>
+          <a href="js/bezierCurve.js" download="js/bezierCurve.js">
+            <div class="picCont" title="Click to download script.">
+              <img src="pics/download-button.png" alt="Download button">
+            </div>
+          </a>
         </div>
       </div>
       <div class="right">
         <button class="animationBtn" onclick="animation()">Draw</button>
         <button class="speedBtn" onclick="openSpeed()">Speed</button>
 
-        <button class="colorBtn">Color<input type="color"></button>
+        <button class="colorBtn">Color</button>
 
         <div class="speedModal">
           <div class="banana">
@@ -107,10 +220,11 @@
               C467.228119,65.875397 476.663940,64.139992 485.829712,61.477814 
               C495.028107,58.806183 503.954437,55.197834 513.000000,52.000008" />
         </svg>
-        <div class="picCont2" title="Click to download SVG.">
-          <a href="pics/TwitterSVG.txt" download="pics/TwitterSVG.txt">
-            <img src="pics/download-button.png" alt="Download button"></a>
-        </div>
+        <a href="pics/twitter.svg" download="pics/twitter.svg">
+          <div class="picCont2" title="Click to download SVG.">
+            <img src="pics/download-button.png" alt="Download button">
+          </div>
+        </a>
       </div>
 
     </div>
@@ -121,10 +235,11 @@
       </div>
       <div class="pngCont">
         <img src="pics/twitter.png" alt="Twitter logo">
-        <div class="picCont3" title="Click to download PNG.">
-          <a href="pics/twitter.png" download="pics/twitter.png">
-            <img src="pics/download-button.png" alt="Download button"></a>
-        </div>
+        <a href="pics/twitter.png" download="pics/twitter.png">
+          <div class="picCont3" title="Click to download PNG.">
+            <img src="pics/download-button.png" alt="Download button">
+          </div>
+        </a>
       </div>
     </div>
 
@@ -140,6 +255,26 @@
     </div>
 
   </div>
+  <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">News</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">our Team</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

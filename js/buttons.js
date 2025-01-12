@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-
+    
+    const btnSlika = document.querySelector('.slikaBtn')
     const btnBezier = document.getElementById('btnBezier');
     const btnPNG = document.getElementById('btnPNG');
     const btnSVG = document.getElementById('btnSVG');
     const btnVizitka = document.getElementById('btnVizitka');
 
-    const page1 = document.getElementById('pageMain');
+    const pageMain = document.querySelector('.homePage');
+    const page1 = document.getElementById('page1');
     const page2 = document.getElementById('page2');
     const page3 = document.getElementById('page3');
     const page4 = document.getElementById('page4');
@@ -19,6 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const downloadPic3 = document.querySelector('.picCont3');
 
 
+    btnSlika.addEventListener('click', function () {
+        btnBezier.classList.remove('active');
+        btnSVG.classList.remove('active');
+        btnPNG.classList.remove('active');
+        btnVizitka.classList.remove('active');
+
+        pageMain.classList.add('pageShown');
+        page1.classList.remove('pageShown');
+        page2.classList.remove('pageShown');
+        page3.classList.remove('pageShown');
+        page4.classList.remove('pageShown');
+    });
     btnBezier.addEventListener('click', function () {
         btnBezier.classList.add('active');  // pobarva gumb v modro
         btnSVG.classList.remove('active');
@@ -29,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         page2.classList.remove('pageShown');
         page3.classList.remove('pageShown');
         page4.classList.remove('pageShown');
+        pageMain.classList.remove('pageShown');
     });
 
     btnSVG.addEventListener('click', function () {
@@ -41,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         page2.classList.add('pageShown');
         page3.classList.remove('pageShown');
         page4.classList.remove('pageShown');
+        pageMain.classList.remove('pageShown');
     });
 
     btnPNG.addEventListener('click', function () {
@@ -53,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         page2.classList.remove('pageShown');
         page3.classList.add('pageShown');
         page4.classList.remove('pageShown');
+        pageMain.classList.remove('pageShown');
     });
 
     btnVizitka.addEventListener('click', function () {
@@ -64,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         page1.classList.remove('pageShown');
         page2.classList.remove('pageShown');
         page3.classList.remove('pageShown');
+        pageMain.classList.remove('pageShown');
         page4.classList.add('pageShown');
     });
 

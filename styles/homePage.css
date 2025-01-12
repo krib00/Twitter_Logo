@@ -12,6 +12,7 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--twitterC);
+    border-top-right-radius: 100px;
 }
 .slikaHP{
     gap:30px;
@@ -39,7 +40,6 @@
     align-items: center;
     flex-direction: column;
     user-select: none;
-    border-top-left-radius: 60px;
     background-color: white;
 }
 .maliChirp{

@@ -8,15 +8,6 @@
     position: relative;
     background-color: white;
 }
-.spanCont4{
-    position: absolute;
-    top:45px;
-}
-.spanCont4 span{
-    font-size:45px;
-    letter-spacing: 1px;
-    font-family:cursive;
-}
 .pCont{
     display:flex;
     align-items: center;
@@ -24,5 +15,5 @@
     flex-direction: column;
     line-height: 80px;
     font-size:30px;
-    font-family:cursive;
+    font-family: Verdana;
 }

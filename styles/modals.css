@@ -21,7 +21,7 @@
 }
 .banana span{
     font-size:25px;
-    font-family:cursive;
+    font-family: sans-serif;
 }
 .speedInp{
     margin-top: 50px;
@@ -41,15 +41,15 @@
 }
 .okej{
     border: none;
-    height:50px;
-    width:250px;
+    height:40px;
+    width:300px;
     background-color: black;
     color: white;
     cursor:pointer;
     border-radius:20px;
-    font-size:17px;
-    font-weight: 500;
-    font-family:cursive;
+    font-size:15px;
+    font-weight: 700;
+    font-family: sans-serif;
     transition-duration: 0.2s;
     display:flex;
     align-items: center;
@@ -58,5 +58,4 @@
 .okej:hover{
     background-color: var(--twitterC);
     transition-duration: 0.2s;
-    font-size:19px;
 }

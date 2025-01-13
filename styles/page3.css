@@ -8,15 +8,6 @@
     position: relative;
     background-color: white;
 }
-.spanCont3{
-    top:45px;
-    position: absolute;
-}
-.spanCont3 span{
-    font-size:45px;
-    letter-spacing: 1px;
-    font-family:cursive;
-}
 .pngCont{
     height:520px;
     width:520px;

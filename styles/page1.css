@@ -65,31 +65,36 @@
     display: none;
     font-family:sans-serif
 }
-.spanCont1{
+.spanCont1, .spanCont2, .spanCont3, .spanCont4{
     top:45px;
     position: absolute;
 }
-.spanCont1 span{
-    font-size:45px;
-    letter-spacing: 1px;
-    font-family:cursive;
+.spanCont1 span, .spanCont2 span, .spanCont3 span, .spanCont4 span{
+    font-family: twitter1;
+    line-height: 80px;
+    font-size: 70px;
+    margin-bottom: 48px;
+    margin-top: 48px;
+    word-wrap: break-word;
+    letter-spacing: 2px;
+    color: #111;
+    user-select: none;
 }
 .animationBtn, .speedBtn, .colorBtn{
     border: none;
-    height:50px;
-    width:250px;
+    height:40px;
+    width:300px;
     background-color: black;
     color: white;
     cursor:pointer;
     border-radius:20px;
-    font-size:17px;
-    font-weight: 500;
-    font-family:cursive;
+    font-size:15px;
+    font-weight: 700;
+    font-family:sans-serif;
     transition-duration: 0.2s;
     margin-top:5px;
 }
 .animationBtn:hover, .speedBtn:hover, .colorBtn:hover{
     background-color: var(--twitterC);
     transition-duration: 0.2s;
-    font-size:19px;
 }

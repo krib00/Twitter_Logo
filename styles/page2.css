@@ -8,15 +8,6 @@
     position: relative;
     background-color: white;
 }
-.spanCont2{
-    top:45px;
-    position: absolute;
-}
-.spanCont2 span{
-    font-size:45px;
-    letter-spacing: 1px;
-    font-family:cursive;
-}
 .slika2 svg{
     height:425;
     width:520px;

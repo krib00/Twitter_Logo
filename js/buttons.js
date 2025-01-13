@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     btnSlika.addEventListener('click', function () {
+        btnSlika.classList.add('active');
         btnBezier.classList.remove('active');
         btnSVG.classList.remove('active');
         btnPNG.classList.remove('active');
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         page4.classList.remove('pageShown');
     });
     btnBezier.addEventListener('click', function () {
+        btnSlika.classList.remove('active');
         btnBezier.classList.add('active');  // pobarva gumb v modro
         btnSVG.classList.remove('active');
         btnPNG.classList.remove('active');
@@ -47,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btnSVG.addEventListener('click', function () {
+        btnSlika.classList.remove('active');
         btnBezier.classList.remove('active');
         btnSVG.classList.add('active');
         btnPNG.classList.remove('active');
@@ -60,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btnPNG.addEventListener('click', function () {
+        btnSlika.classList.remove('active');
         btnBezier.classList.remove('active');
         btnSVG.classList.remove('active');
         btnPNG.classList.add('active');
@@ -73,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btnVizitka.addEventListener('click', function () {
+        btnSlika.classList.remove('active');
         btnBezier.classList.remove('active');
         btnSVG.classList.remove('active');
         btnPNG.classList.remove('active');

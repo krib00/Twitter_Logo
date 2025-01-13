@@ -9,6 +9,10 @@
     font-family: 'twitter2';
     src: url("..\\fonts\\PICOBLA_.TTF") format("truetype");
 }
+@font-face {
+    font-family: 'twitter3';
+    src: url("..\\fonts\\PICOWA__.TTF") format("truetype");
+}
 *{
     margin:0;
     padding:0;
@@ -38,6 +42,7 @@ body, html{
     justify-content: center;
     align-items: center;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+    user-select: none;
 }
 .slikaBtn{
     display:flex;
@@ -54,26 +59,44 @@ body, html{
 }
 .slikaBtn:hover{
     fill:var(--twitterC);
+    color: var(--twitterC);
 }
-.slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4{
-    height:100%;
+.profilBtn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.profilSvg{
+    height: 30px;
+    width: 30px;
+    fill:white;
+}
+.slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4, .profilBtn{
+    height:30px;
     width:200px;
+    font-weight: 700;
     cursor: pointer;
     border:none;
     background-color: #111;
     color:white;
-    font-size:18px;
+    font-size:16px;
     transition-duration: 0.2s;
-    font-family: cursive;
+    font-family: sans-serif;
     border-radius:16px;
+    position: relative;
 }
-.slikaBtn:hover, .meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover, .meniBtn4:hover{
+.meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover, .meniBtn4:hover, .profilBtn:hover{
     transition-duration: 0.2s;
     text-decoration: underline 2px;
 }
+.flexCont1, .flexCont2{
+    flex-grow:1;
+}
 .active {
     background-color:white !important;
-    color:#111 !important;
+    color:#111;
+    fill:#111;
     text-decoration: none !important;
 }
 .pageShown{

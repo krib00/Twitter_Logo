@@ -86,9 +86,8 @@
     color:#111;
 }
 .google:hover, .apple:hover{
-    background-color:rgba(230, 230, 230, 0.116);
+    background-image: linear-gradient(to top right, var(--twitterC), transparent);
     transition-duration: 0.2s;
-    color:#6d6666;
 }
 .google svg{
     height:20px;

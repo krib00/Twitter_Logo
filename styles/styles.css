@@ -1,6 +1,5 @@
 :root {
     --twitterC: rgb(3, 169, 244);
-    background-color: rgb(40, 148, 36);
 }
 @font-face {
     font-family: 'twitter1';
@@ -133,7 +132,7 @@ body, html{
 }
 .profilModal h2{
     margin-top:30px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: twitter2;
 }
 .crta{
@@ -149,8 +148,14 @@ body, html{
     margin-bottom:15px;
     border:none;
 }
-.create2:hover, .signin2:hover{
-    opacity: 0.5;
+.create2:hover {
+    background-image: linear-gradient(to top right, #fff, transparent);
+    border: 1px solid #111;
+    color: #111;
+}
+.signin2:hover{
+    background-image: linear-gradient(to top right, var(--twitterC), transparent);
+    color:white;
 }
 .slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4{
     transition-duration: 0.2s;
@@ -168,7 +173,7 @@ body, html{
     border-radius:16px;
     position: relative;
 }
-.meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover, .meniBtn4:hover{
+.meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover{
     transition-duration: 0.2s;
     text-decoration: underline 2px;
 }
@@ -188,8 +193,8 @@ body, html{
 /* DROP DOWN - TEME*/
 .themeCont{
     display:flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 .themeCont svg{
     height: 15px;
@@ -216,22 +221,27 @@ body, html{
     z-index: 100;
 }
 .dropDown li{
+    text-align: left;
     list-style: none;
-    background-color: #111;
+    color: #111;
+    border:1px solid;
+    background-color: white;
     height:40px;
     font-size:15px;
     font-weight: 700;
     font-family: sans-serif;
-    display:flex;
-    justify-content: center;
-    align-items: center;
     top:11px;
     position: relative;
+    border-radius:5px;
+    display:flex;
+    align-items: center;
+}
+.dropDown li span{
+    margin-left:5px; 
 }
 .dropDown li:hover{
-    background-color: white;
-    color:#111;
     border:1px solid #111;
+    background-image: linear-gradient(to bottom , var(--twitterC), transparent);
 }
 /* NOGA */
 footer{
@@ -258,7 +268,7 @@ footer{
     opacity: 0,9;
 }
 .socialIcons a:hover{
-    background-color: #111;
+    background-color: var(--twitterC);
     transition: 0.5s;
 }
 .socialIcons a:hover i{

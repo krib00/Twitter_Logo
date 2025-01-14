@@ -177,7 +177,8 @@ body, html{
 }
 .active {
     background-color:var(--twitterC) !important;
-    fill:white;
+    fill:white !important;
+    color: white !important;
     text-decoration: none !important;
 }
 .pageShown{

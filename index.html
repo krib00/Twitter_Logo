@@ -10,17 +10,17 @@
   <script src="js/animate.js"></script>
   <script src="js/modals.js"></script>
   <script src="js/tooltip.js"></script>
+  <script src="js/color.js"></script>
   <link rel="icon" href="pics/twitter.png" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/homePage.css">
   <link rel="stylesheet" href="styles/page1.css">
   <link rel="stylesheet" href="styles/page2.css">
   <link rel="stylesheet" href="styles/page3.css">
-  <link rel="stylesheet" href="styles/page4.css">
   <link rel="stylesheet" href="styles/modals.css">
 </head>
 
-<body onload="bezier()">
+<body onload="bezier('rgb(3, 169, 244)')">
   <div class="meni">
     <button class="slikaBtn active">
       <svg viewBox="0 0 512 422">
@@ -72,11 +72,27 @@
     <button class="meniBtn1" id="btnBezier">Bezier</button>
     <button class="meniBtn2" id="btnSVG">SVG</button>
     <button class="meniBtn3" id="btnPNG">PNG</button>
-    <button class="meniBtn4" id="btnVizitka">About</button>
+    <button class="meniBtn4" id="btnTeme">
+      <div class="themeCont">
+        <span>Theme</span>
+        <svg viewBox="0 0 1024 1024">
+          <path
+            d="M476.455 806.696L95.291 425.532Q80.67 410.911 80.67 390.239t14.621-34.789 35.293-14.117 34.789 14.117L508.219 698.8l349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789L546.537 800.142q-19.159 19.159-38.318 19.159t-31.764-12.605z">
+          </path>
+        </svg>
+      </div>
+      <ul class="dropDown">
+        <li class="drop1" onclick="colorSwitch('rgb(3, 169, 244)')"><span>Original</span></li>
+        <li class="drop2" onclick="colorSwitch('rgb(168, 32, 32)')"><span>Red</span></li>
+        <li class="drop3"onclick="colorSwitch('rgb(40, 148, 36)')"><span>Green</span></li>
+        <li class="drop4"onclick="colorSwitch('rgb(126, 36, 182)')"><span>Purple</span></li>
+      </ul>
+    </button>
     <div class="flexCont2"></div>
-    <button class="profilBtn">
-      <svg class="profilSvg" version="1.1" viewBox="0 0 512 512">
-        <path d="
+    <div class="outerProfilBtn">
+      <button class="profilBtn">
+        <svg class="profilSvg" version="1.1" viewBox="0 0 512 512">
+          <path d="
    M234.000000,1.000000 
      C251.687561,1.000000 269.375122,1.000000 287.814758,1.205926 
      C290.742218,3.178943 293.377319,2.266233 295.786469,2.674038 
@@ -140,9 +156,23 @@
      C287.579895,118.948029 267.343262,113.877335 245.058136,117.100304 
      C225.272842,119.961746 209.232056,129.829056 196.945450,145.410004 
      C188.620895,155.966553 182.965927,167.938354 181.238434,182.400513 z" />
-      </svg>
-      <span>Profile</span>
-    </button>
+        </svg>
+        <span>Profile</span>
+        <div class="arrowCont">
+          <svg class="arrowSvg" viewBox="0 0 1024 1024">
+            <path
+              d="M476.455 806.696L95.291 425.532Q80.67 410.911 80.67 390.239t14.621-34.789 35.293-14.117 34.789 14.117L508.219 698.8l349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789L546.537 800.142q-19.159 19.159-38.318 19.159t-31.764-12.605z">
+            </path>
+          </svg>
+        </div>
+      </button>
+      <div class="profilModal">
+        <h2>Join Twitter today.</h2>
+        <div class="crta"></div>
+        <button class="create2">Create account</button>
+        <button class="signin2">Sign in</button>
+      </div>
+    </div>
   </div>
   <div class="glavni">
 
@@ -228,8 +258,6 @@
         <button class="animationBtn" onclick="animation()">Draw</button>
         <button class="speedBtn" onclick="openSpeed()">Speed</button>
 
-        <button class="colorBtn">Color</button>
-
         <div class="speedModal">
           <div class="banana">
             <span>Select drawing speed:</span>
@@ -311,17 +339,6 @@
             <img src="pics/download-button.png" alt="Download button">
           </div>
         </a>
-      </div>
-    </div>
-
-    <div class="slika4" id="page4">
-      <div class="spanCont4">
-        <span>Info</span>
-      </div>
-      <div class="pCont">
-        <p>Created by: Kristijan Boben</p>
-        <p>Professor: Boštjan Vouk</p>
-        <p>Made with: Html, css and javascript</p>
       </div>
     </div>
 

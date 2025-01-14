@@ -1,5 +1,5 @@
 let isAnimating = false;
-function animation() {
+function animation(color) {
   if (isAnimating) return;  // če je isAnimatin true se nič ne zgodi, v primerui da je false, se začne proces risanja
 
   isAnimating = true;
@@ -114,7 +114,7 @@ function animation() {
       const cy = (1 - t) ** 3 * y0 + 3 * (1 - t) ** 2 * t * cp1y + 3 * (1 - t) * t ** 2 * cp2y + t ** 3 * y;
 
       ctxAni.bezierCurveTo(cx, cy, cx, cy, cx, cy);
-      ctxAni.strokeStyle = "rgb(3, 169, 244)";
+      ctxAni.strokeStyle = color;
       ctxAni.stroke();
 
       if (t >= 1) {
@@ -127,7 +127,7 @@ function animation() {
     if (index < pathSegments.length) {
       requestAnimationFrame(drawNextSegment);
     } else {
-      bezier();
+      bezier(color);
       isAnimating = false;
     }
   }

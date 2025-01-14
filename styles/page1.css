@@ -2,8 +2,7 @@
     height:100%;
     width:100%;
     display:none;
-    flex-direction: row;
-    position: absolute;
+    position: relative;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -65,11 +64,11 @@
     display: none;
     font-family:sans-serif
 }
-.spanCont1, .spanCont2, .spanCont3, .spanCont4{
+.spanCont1, .spanCont2, .spanCont3{
     top:45px;
     position: absolute;
 }
-.spanCont1 span, .spanCont2 span, .spanCont3 span, .spanCont4 span{
+.spanCont1 span, .spanCont2 span, .spanCont3 span{
     font-family: twitter1;
     line-height: 80px;
     font-size: 70px;
@@ -80,7 +79,7 @@
     color: #111;
     user-select: none;
 }
-.animationBtn, .speedBtn, .colorBtn{
+.animationBtn, .speedBtn{
     border: none;
     height:40px;
     width:300px;
@@ -94,7 +93,7 @@
     transition-duration: 0.2s;
     margin-top:5px;
 }
-.animationBtn:hover, .speedBtn:hover, .colorBtn:hover{
+.animationBtn:hover, .speedBtn:hover{
     background-color: var(--twitterC);
     transition-duration: 0.2s;
 }

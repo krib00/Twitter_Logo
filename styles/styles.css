@@ -1,5 +1,6 @@
 :root {
     --twitterC: rgb(3, 169, 244);
+    background-color: rgb(40, 148, 36);
 }
 @font-face {
     font-family: 'twitter1';
@@ -61,16 +62,98 @@ body, html{
     fill:var(--twitterC);
     color: var(--twitterC);
 }
+.outerProfilBtn{
+    flex-direction: column;
+    position: relative;
+}
 .profilBtn{
     display:flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
 }
+.profilBtn:hover{
+    color:var(--twitterC);
+
+    .profilSvg{
+        fill:var(--twitterC);
+    }
+    .arrowSvg{
+        fill:var(--twitterC);
+    }
+}
 .profilSvg{
     height: 30px;
     width: 30px;
     fill:white;
+    display:block;
+}
+.arrowSvg{
+    height: 15px;
+    width: 15px;
+    fill:white;
+}
+.arrowCont{
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.profilModal{
+    top:37px;
+    display:none;
+    align-items: center;
+    flex-direction: column;
+    height:300px;
+    width:200px;
+    position: absolute;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-left: 1px solid #111;
+    border-bottom: 1px solid #111;
+    background-color: white;  
+    z-index: 100;
+}
+.profileActive{
+    display:flex;
+}
+.create2, .signin2{
+    height:30px;
+    width:180px;
+    max-width:380px;
+    border:1px solid;
+    line-height: 20px;
+    border-radius: 9999px;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    font-size:13px;
+    font-family: sans-serif;
+}
+.profilModal h2{
+    margin-top:30px;
+    font-size: 20px;
+    font-family: twitter2;
+}
+.crta{
+    height:1px;
+    width:180px;
+    background-color: #111;
+    margin-top:35px;
+    margin-bottom:35px;
+}
+.create2{
+    background-color: var(--twitterC);
+    color:white;
+    margin-bottom:15px;
+    border:none;
+}
+.create2:hover, .signin2:hover{
+    opacity: 0.5;
+}
+.slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4{
+    transition-duration: 0.2s;
 }
 .slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4, .profilBtn{
     height:30px;
@@ -81,12 +164,11 @@ body, html{
     background-color: #111;
     color:white;
     font-size:16px;
-    transition-duration: 0.2s;
     font-family: sans-serif;
     border-radius:16px;
     position: relative;
 }
-.meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover, .meniBtn4:hover, .profilBtn:hover{
+.meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover, .meniBtn4:hover{
     transition-duration: 0.2s;
     text-decoration: underline 2px;
 }
@@ -94,17 +176,64 @@ body, html{
     flex-grow:1;
 }
 .active {
-    background-color:white !important;
-    color:#111;
-    fill:#111;
+    background-color:var(--twitterC) !important;
+    fill:white;
     text-decoration: none !important;
 }
 .pageShown{
     display:flex !important;
 }
+
+/* DROP DOWN - TEME*/
+.themeCont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.themeCont svg{
+    height: 15px;
+    width: 15px;
+    fill:white;
+    margin-left: 15px;
+    transition: transform 0.5s ease;
+}
+.meniBtn4{
+    display:block;
+}
+.meniBtn4:hover{
+    .dropDown{
+        display:block;
+    }   
+    .themeCont svg{
+        transform: rotate(180deg);
+    }
+}
+.dropDown{
+    display:none;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+}
+.dropDown li{
+    list-style: none;
+    background-color: #111;
+    height:40px;
+    font-size:15px;
+    font-weight: 700;
+    font-family: sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top:11px;
+    position: relative;
+}
+.dropDown li:hover{
+    background-color: white;
+    color:#111;
+    border:1px solid #111;
+}
 /* NOGA */
 footer{
-    box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.3);
     background-color: #111;
 }
 .footerContainer{

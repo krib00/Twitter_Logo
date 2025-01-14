@@ -1,4 +1,4 @@
-function bezier() {
+function bezier(color) {
   const canvas = document.getElementById("canv");
   const ctx = canvas.getContext("2d");
 
@@ -60,8 +60,8 @@ function bezier() {
   ctx.bezierCurveTo(226, 177, 252, 177, 252, 177);
   ctx.bezierCurveTo(252, 178, 248, 154, 252, 132);
 
-  ctx.strokeStyle = "rgb(3, 169, 244)";
+  ctx.strokeStyle = color;
   ctx.stroke(); 
-  ctx.fillStyle = "rgb(3, 169, 244)";
+  ctx.fillStyle = color;
   ctx.fill();
 }

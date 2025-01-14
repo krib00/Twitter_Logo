@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 output.textContent = 'Medium';
                 window.speed = 2.5;
                 break;
-
         }
 
     });

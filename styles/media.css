@@ -1,0 +1,116 @@
+/* HOME PAGE */
+@media (max-width:1200px) {
+    .desnoHP{
+        min-width:45vw !important;
+    }
+}
+@media (max-width:1100px) {
+    .desnoHP{
+        min-width:50vw !important;
+    }
+    .slikaHP span{
+        font-size:30px !important;
+    }
+}
+@media (max-width:1000px) {
+    .meniHP h1{
+        font-size:60px !important;
+    }
+}
+@media (max-width:900px){
+    .slikaHP span{
+        font-size:20px !important;
+        letter-spacing: 1px !important;
+    }
+    .searchIcon, .peopleIcon, .textIcon{
+        margin-left: 40px !important;
+    }
+    .meniHP h1{
+        font-size:50px !important;
+    }
+    .slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4, .profilBtn{
+        font-size: 14px;
+    }
+    .dropNaslov, .drop1, .drop2, .drop3, .drop4{
+        font-size:13px;
+    }
+    
+}
+@media (max-width: 800px){
+    .desnoHP{
+        min-width:60vw !important;
+    }
+    .slikaHP span{
+        font-size:20px !important;
+    }
+    .searchIcon, .peopleIcon, .textIcon{
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 700px){
+    .slikaHP span{
+        font-size:15px !important;
+        font-family: oxygen1 !important;
+    }
+    .slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4, .profilBtn{
+        font-size: 12px;
+    }
+    .meniHP h1{
+        font-size:45px !important;
+    }
+    .meniHP h2, .skatlaRacun span{
+        font-size: 25px !important;
+    }
+    .google, .apple, .create, .signin, .orBlock{
+        width:250px !important;
+    }
+    .searchIcon, .peopleIcon, .textIcon{
+        flex-direction: column;
+    }
+    .profilBtn, .profilModal, .profilModal button, .crta{
+        width:150px !important;
+        font-size: 12px;
+    }
+    .profilModal h2{
+        font-size: 15px !important;
+    }
+    .arrowSvg, .slikaBtn svg, .themeCont svg, .profilSvg{
+        display:none !important;
+    }
+    .footerNav{
+        font-size: 12px !important;
+    }
+}
+@media (max-width: 550px){
+    .slikaHP span{
+        font-size:11px !important;
+        font-family: oxygen1 !important;
+        line-height: 50px !important;
+    }
+    .slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4, .profilBtn{
+        font-size: 11px !important;
+    }
+    .meniHP h1{
+        font-size:35px !important;
+    }
+    .meniHP h2, .skatlaRacun span{
+        font-size: 20px !important;
+    }
+    .google, .apple, .create, .signin, .orBlock{
+        width:200px !important;
+        font-size: 14px !important;
+    }
+    .profilBtn, .profilModal, .profilModal button, .crta{
+        width:90px !important;
+        font-size: 10px !important;
+    }
+    .profilModal h2{
+        font-size: 10px !important;
+    }
+    .dropNaslov, .drop1, .drop2, .drop3, .drop4{
+        font-size:11px !important;
+    }
+    .footerNav{
+        font-size: 9px !important;
+    }
+}

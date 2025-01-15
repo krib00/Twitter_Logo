@@ -22,17 +22,17 @@
     user-select: none;
 }
 .searchIcon, .peopleIcon, .textIcon{
-    color:white;
-    line-height: 70px;
-    font-size:35px;
-    font-family: twitter1;
-    letter-spacing:2px;
     display:flex; 
     align-items: center;
     margin-left:50px;
 }
 .slikaHP span{
     margin-left:15px;
+    line-height: 70px;
+    font-size:35px;
+    font-family: twitter1;
+    letter-spacing:2px;
+    color:white;
 }
 .desnoHP{
     min-width:40vw;
@@ -72,8 +72,8 @@
     cursor:pointer;
     transition-duration: 0.2s;
     font-size:15px;
-    font-family: sans-serif;
-    font-weight: 700;
+    font-family: oxygen1;
+    font-weight:500;
 }
 .google{
     margin-bottom:16px;
@@ -118,11 +118,12 @@
     font-size: 15px;
     font-weight: 400;
     margin:auto 4px auto 4px;
-    font-family: sans-serif;
-    color:rgba(0, 0, 0, 0.664);
+    font-family: oxygen1;
+    font-weight:500;
+    color:#111;
 }
 .levaCrta, .desnaCrta{
-    background-color: rgba(0, 0, 0, 0.664);
+    background-color: #111;
     height:1px;
     width:135px;
     margin-left:4px;

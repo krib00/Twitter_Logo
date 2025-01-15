@@ -62,7 +62,8 @@
     white-space: nowrap;
     pointer-events: none;
     display: none;
-    font-family:sans-serif
+    font-family: oxygen1;
+    font-weight:500;
 }
 .spanCont1, .spanCont2, .spanCont3{
     top:45px;
@@ -88,10 +89,10 @@
     cursor:pointer;
     border-radius:20px;
     font-size:15px;
-    font-weight: 700;
-    font-family:sans-serif;
     transition-duration: 0.2s;
     margin-top:5px;
+    font-family: oxygen1;
+    font-weight:500;
 }
 .animationBtn:hover, .speedBtn:hover{
     background-color: var(--twitterC);

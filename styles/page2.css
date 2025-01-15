@@ -48,5 +48,6 @@
     white-space: nowrap;
     pointer-events: none;
     display: none;
-    font-family:sans-serif
+    font-family: oxygen1;
+    font-weight:500;
 }

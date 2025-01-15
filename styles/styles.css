@@ -13,6 +13,10 @@
     font-family: 'twitter3';
     src: url("..\\fonts\\PICOWA__.TTF") format("truetype");
 }
+@font-face {
+    font-family: 'oxygen1';
+    src: url("..\\fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
 *{
     margin:0;
     padding:0;
@@ -128,12 +132,14 @@ body, html{
     cursor:pointer;
     transition-duration: 0.2s;
     font-size:13px;
-    font-family: sans-serif;
+    font-family: oxygen1;
+    font-weight:500;
 }
 .profilModal h2{
     margin-top:30px;
     font-size: 18px;
-    font-family: twitter2;
+    font-family: oxygen1;
+    font-weight: 600;
 }
 .crta{
     height:1px;
@@ -169,13 +175,14 @@ body, html{
     background-color: #111;
     color:white;
     font-size:16px;
-    font-family: sans-serif;
+    font-family: oxygen1;
+    font-weight:600;
     border-radius:16px;
     position: relative;
 }
 .meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover{
     transition-duration: 0.2s;
-    text-decoration: underline 2px;
+    color: var(--twitterC);
 }
 .flexCont1, .flexCont2{
     flex-grow:1;
@@ -184,7 +191,6 @@ body, html{
     background-color:var(--twitterC) !important;
     fill:white !important;
     color: white !important;
-    text-decoration: none !important;
 }
 .pageShown{
     display:flex !important;
@@ -207,41 +213,81 @@ body, html{
     display:block;
 }
 .meniBtn4:hover{
+    color: var(--twitterC);
+    transition-duration: 0.2;
+
     .dropDown{
         display:block;
     }   
     .themeCont svg{
         transform: rotate(180deg);
+        fill: var(--twitterC);
     }
 }
 .dropDown{
     display:none;
-    width: 100%;
     position: absolute;
-    z-index: 100;
-}
-.dropDown li{
-    text-align: left;
-    list-style: none;
-    color: #111;
-    border:1px solid;
+    width:100%;
     background-color: white;
-    height:40px;
+    padding: 10px 0 10px;
+    border-radius:10px;
+    top:30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+}
+.dropNaslov, .drop1, .drop2, .drop3, .drop4{
     font-size:15px;
-    font-weight: 700;
-    font-family: sans-serif;
-    top:11px;
+}
+.dropNaslov{
     position: relative;
-    border-radius:5px;
+    color: #111;
+    background-color: white;
+    text-align: left;
     display:flex;
     align-items: center;
+    cursor:auto;
+    height:40px;
+    font-family: oxygen1;
+    font-weight:600;
 }
-.dropDown li span{
+.dropCrta{
+    height:2px;
+    margin: 5px 0 5px;
+    background-color: #111;
+    position: relative;
+}
+.drop1, .drop2, .drop3, .drop4{
+    text-align: left;
+    color: #111;
+    background-color: white;
+    height:40px;
+    font-family: oxygen1;
+    font-weight:500;
+    position: relative;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.drop1:hover, .drop2:hover, .drop3:hover, .drop4:hover{
+    color:white;
+    opacity: 1;
+}
+.drop1:hover{
+    background-color: rgb(3, 169, 244);
+}
+.drop2:hover{
+    background-color: rgb(168, 32, 32);
+}
+.drop3:hover{
+    background-color: rgb(40, 148, 36);
+}
+.drop4:hover{
+    background-color: rgb(126, 36, 182);
+}
+
+.dropDown span{
     margin-left:5px; 
-}
-.dropDown li:hover{
-    border:1px solid #111;
-    background-image: linear-gradient(to bottom , var(--twitterC), transparent);
 }
 /* NOGA */
 footer{

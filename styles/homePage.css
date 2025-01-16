@@ -3,6 +3,7 @@
     justify-content: center;
     min-height: auto;
     flex: 1 1 auto;
+    height:100%;
 }
 .levoHP{
     min-height:40vh;

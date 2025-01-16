@@ -16,11 +16,15 @@
     .meniHP h1{
         font-size:60px !important;
     }
+    .flexCont1, .flexCont2{
+        flex-grow:0;
+        display:none;
+    }
 }
 @media (max-width:900px){
     .slikaHP span{
         font-size:20px !important;
-        letter-spacing: 1px !important;
+        letter-spacing: 1.5px !important;
     }
     .searchIcon, .peopleIcon, .textIcon{
         margin-left: 40px !important;
@@ -48,9 +52,18 @@
     }
 }
 @media (max-width: 700px){
+    .homePage{
+        flex-direction: column;
+    }
+    .footerContainer{
+        margin-top:50px;
+    }
+    .levoHP{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 100px;
+    }
     .slikaHP span{
-        font-size:15px !important;
-        font-family: oxygen1 !important;
+        font-size:16px !important;
     }
     .slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4, .profilBtn{
         font-size: 12px;
@@ -64,12 +77,12 @@
     .google, .apple, .create, .signin, .orBlock{
         width:250px !important;
     }
-    .searchIcon, .peopleIcon, .textIcon{
-        flex-direction: column;
-    }
-    .profilBtn, .profilModal, .profilModal button, .crta{
+    .profilModal, .profilModal button, .crta{
         width:150px !important;
         font-size: 12px;
+    }
+    .profilModal{
+        height:250px;
     }
     .profilModal h2{
         font-size: 15px !important;
@@ -79,6 +92,20 @@
     }
     .footerNav{
         font-size: 12px !important;
+    }
+    .profilModal, .profilModal h2, .crta{
+        max-width:130px !important;
+        font-size: 14px !important;
+    } 
+    .profilModal button{
+        max-width:130px !important;
+        font-size: 12px !important;
+    }
+    .profilBtn{
+        max-width:130px !important;
+    }
+    .profilBtn{
+        width: 150px !important;
     }
 }
 @media (max-width: 550px){
@@ -100,12 +127,12 @@
         width:200px !important;
         font-size: 14px !important;
     }
-    .profilBtn, .profilModal, .profilModal button, .crta{
-        width:90px !important;
+    .profilModal, .profilModal h2, .profilModal button, .crta{
+        max-width:90px !important;
         font-size: 10px !important;
     }
-    .profilModal h2{
-        font-size: 10px !important;
+    .profilBtn{
+        max-width:90px !important;
     }
     .dropNaslov, .drop1, .drop2, .drop3, .drop4{
         font-size:11px !important;

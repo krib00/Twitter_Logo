@@ -75,14 +75,21 @@ body, html{
     align-items: center;
     gap: 15px;
 }
-.profilBtn:hover{
-    color:var(--twitterC);
+.outerProfilBtn:hover{
+    .profilBtn{
+        color:var(--twitterC);
+    }
 
     .profilSvg{
         fill:var(--twitterC);
     }
     .arrowSvg{
         fill:var(--twitterC);
+        transform: rotate(180deg);
+        transition: transform 0.5s ease;
+    }
+    .profilModal{
+        display:flex;
     }
 }
 .profilSvg{
@@ -95,27 +102,22 @@ body, html{
     height: 15px;
     width: 15px;
     fill:white;
+    transition: transform 0.5s ease;
 }
 .arrowCont{
     display: flex;
     align-items: center;
-    transition: transform 0.5s ease;
-}
-.rotate{
-    transform: rotate(180deg);
 }
 .profilModal{
-    top:37px;
+    top:30px;
     display:none;
     align-items: center;
     flex-direction: column;
     height:300px;
     width:200px;
     position: absolute;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-    border-left: 1px solid #111;
-    border-bottom: 1px solid #111;
+    border-radius:10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background-color: white;  
     z-index: 100;
 }

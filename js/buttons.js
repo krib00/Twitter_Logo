@@ -1,10 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     
-    const profilBtn = document.querySelector('.profilBtn');
-    const arrowCont = document.querySelector('.arrowCont');
-
-    const profilModal = document.querySelector('.profilModal');
-    
     const btnSlika = document.querySelector('.slikaBtn')
     const btnBezier = document.getElementById('btnBezier');
     const btnPNG = document.getElementById('btnPNG');
@@ -91,11 +86,5 @@ document.addEventListener('DOMContentLoaded', function () {
         downloadPic3.classList.remove("downShown");
     });
 
-
-
-    profilBtn.addEventListener('click', function () {
-        arrowCont.classList.toggle("rotate");
-        profilModal.classList.toggle("profileActive");
-    });
 });
 

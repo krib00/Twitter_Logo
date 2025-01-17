@@ -55,9 +55,6 @@
     .homePage{
         flex-direction: column;
     }
-    .footerContainer{
-        margin-top:50px;
-    }
     .levoHP{
         border-top-right-radius: 0;
         border-bottom-right-radius: 100px;
@@ -89,9 +86,6 @@
     }
     .arrowSvg, .slikaBtn svg, .themeCont svg, .profilSvg{
         display:none !important;
-    }
-    .footerNav{
-        font-size: 12px !important;
     }
     .profilModal, .profilModal h2, .crta{
         max-width:130px !important;
@@ -136,8 +130,5 @@
     }
     .dropNaslov, .drop1, .drop2, .drop3, .drop4{
         font-size:11px !important;
-    }
-    .footerNav{
-        font-size: 9px !important;
     }
 }

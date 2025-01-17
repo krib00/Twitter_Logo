@@ -1,3 +1,4 @@
+
 :root {
     --twitterC: rgb(3, 169, 244);
 }
@@ -21,6 +22,9 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
 }
 body, html{
     width: 100%;
@@ -272,75 +276,21 @@ body, html{
     opacity: 0.5;
 }
 .drop1:hover, .drop2:hover, .drop3:hover, .drop4:hover{
-    color:white;
     opacity: 1;
 }
 .drop1:hover{
-    background-color: rgb(3, 169, 244);
+    color: rgb(3, 169, 244);
 }
 .drop2:hover{
-    background-color: rgb(168, 32, 32);
+    color: rgb(168, 32, 32);
 }
 .drop3:hover{
-    background-color: rgb(40, 148, 36);
+    color: rgb(40, 148, 36);
 }
 .drop4:hover{
-    background-color: rgb(126, 36, 182);
+    color: rgb(126, 36, 182);
 }
 
 .dropDown span{
     margin-left:5px; 
-}
-/* NOGA */
-footer{
-    background-color: #111;
-}
-.footerContainer{
-    width: 100%;
-    padding: 70px 30px 20px ;
-}
-.socialIcons{
-    display: flex;
-    justify-content: center;
-}
-.socialIcons a{
-    text-decoration: none;
-    padding:  10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-}
-.socialIcons a i{
-    font-size: 2em;
-    color: black;
-    opacity: 0,9;
-}
-.socialIcons a:hover{
-    background-color: var(--twitterC);
-    transition: 0.5s;
-}
-.socialIcons a:hover i{
-    color: white;
-    transition: 0.5s;
-}
-.footerNav{
-    margin: 30px 0;
-    font-family: twitter1;
-    letter-spacing:1.2px;
-}
-.footerNav ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-.footerNav ul li a{
-    color:white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-.footerNav ul li a:hover{
-    opacity: 1;
 }

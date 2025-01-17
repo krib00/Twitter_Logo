@@ -1,0 +1,126 @@
+footer{
+    background-color: #111;
+    width:100%;
+    position: relative;
+    display:flex; /* ODSTRANI */
+    justify-self: center; 
+    align-items: center;
+
+}
+.outerStoreCont{
+    margin-top:50px;
+}
+.desktopApp{
+    width:100%; /* ODSTRANI */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.desktopApp h2{
+    font-family: twitter1;
+    letter-spacing: 2px;
+    color:white;
+    font-size:22px;
+    font-weight: 600;
+}
+.desktopApp h1{
+    margin-top:8px;
+    font-family: twitter1;
+    letter-spacing: 2px;
+    color:var(--twitterC);
+    font-size:36px;
+    font-weight: 600;
+}
+.storeCont{
+    margin: 30px 0 30px;
+}
+.googleStore, .appStore{
+    width:10rem;
+}
+.googleStore:hover, .appStore:hover{
+    cursor: pointer;
+}
+.socialIcons{
+    width:100%;
+    background-color: #111;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0 30px;
+}
+.socialIcons h1{
+    margin-bottom:15px;
+    font-family: twitter1;
+    letter-spacing: 2px;
+    color:white;
+    font-size:36px;
+    font-weight: 600;
+}
+.wrapper {
+    display: flex;
+    list-style: none;
+  }
+  .wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color:black; 
+  }
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-family: oxygen1;
+  }
+  .twitter .tooltip{
+    width:150px;
+  }
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  .wrapper li:hover,
+  .wrapper li:hover .tooltip,
+  .wrapper li:hover .tooltip::before {
+    background-color: var(--twitterC);
+    color: #ffffff;
+  }

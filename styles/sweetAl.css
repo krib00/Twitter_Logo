@@ -1,0 +1,44 @@
+.swal-button {
+    background-color: var(--twitterC)!important;
+    outline-style:none;
+    border:none;
+    appearance: none;
+    border: 1px solid var(--twitterC);
+    border-radius:5px;
+}
+.swal-button:hover{
+    background-color: white !important;
+    color: var(--twitterC) !important;
+    border:1px solid var(--twitterC) !important;
+}
+.swal-title{
+    font-family: twitter1 !important;
+    font-size:38px;
+    user-select: none;
+    color: #111 !important;
+    letter-spacing: 2px !important;
+    font-style:normal !important;
+    font-weight: 700 !important;
+    margin-bottom:25px !important;
+}
+.swal-text{
+    font-family: oxygen1 !important; 
+    user-select: none;
+    color: #111 !important;
+    font-size:18px;
+    font-style:normal !important;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+    font-style:normal !important;
+    text-align: center;
+}
+.swal-modal{
+    border-radius: 30px !important;
+}
+.swal-icon--success__ring{
+    border-color: var(--twitterC) !important;
+    opacity: 0.8;
+}
+.swal-icon--success__line{
+    background-color:var(--twitterC) !important; 
+}

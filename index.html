@@ -11,6 +11,7 @@
   <script src="js/modals.js"></script>
   <script src="js/tooltip.js"></script>
   <script src="js/color.js"></script>
+  <script src="js/input.js"></script>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
   <link rel="icon" href="pics/twitter.png" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
@@ -21,13 +22,16 @@
   <link rel="stylesheet" href="styles/modals.css">
   <link rel="stylesheet" href="styles/media.css">
   <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/sweetAl.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body onload="bezier('rgb(3, 169, 244)')">
   <div class="meni">
-    <button class="slikaBtn active">
-      <svg viewBox="0 0 512 422">
-        <path d="M513.000000,52.000008 
+    <a href="#">
+      <button class="slikaBtn active">
+        <svg viewBox="0 0 512 422">
+          <path d="M513.000000,52.000008 
             C513.000000,52.444336 513.000000,52.888672 512.762085,53.332447 
             C511.704163,54.127674 510.727539,54.814587 510.087219,55.735371 
             C497.885315,73.282265 483.677368,88.990326 466.522644,101.774231 
@@ -68,9 +72,10 @@
             C456.418274,67.916901 457.200745,68.128365 457.900360,67.971176 
             C467.228119,65.875397 476.663940,64.139992 485.829712,61.477814 
             C495.028107,58.806183 503.954437,55.197834 513.000000,52.000008" />
-      </svg>
-      <span>Home</span>
-    </button>
+        </svg>
+        <span>Home</span>
+      </button>
+    </a>
     <div class="flexCont1"></div>
     <button class="meniBtn4" id="btnTeme">
       <div class="themeCont">
@@ -90,9 +95,9 @@
         <div class="drop4" onclick="colorSwitch('rgb(126, 36, 182)')"><span>Purple</span></div>
       </div>
     </button>
-    <button class="meniBtn1" id="btnBezier">Bezier</button>
-    <button class="meniBtn2" id="btnSVG">SVG</button>
-    <button class="meniBtn3" id="btnPNG">PNG</button>
+    <a href="#"><button class="meniBtn1" id="btnBezier">Bezier</button></a>
+    <a href="#"><button class="meniBtn2" id="btnSVG">SVG</button></a>
+    <a href="#"><button class="meniBtn3" id="btnPNG">PNG</button></a>
     <div class="flexCont2"></div>
     <div class="outerProfilBtn">
       <button class="profilBtn">
@@ -338,7 +343,7 @@
         <span>PNG image</span>
       </div>
       <div class="pngCont">
-        <img src="pics/twitter.png" alt="Twitter logo">
+        <img class="png" src="pics/twitter.png" alt="Twitter logo">
         <a href="pics/twitter.png" download="pics/twitter.png">
           <div class="picCont3" title="Click to download PNG.">
             <img src="pics/download-button.png" alt="Download button">
@@ -349,57 +354,113 @@
 
   </div>
   <footer>
-    <div class="socialIcons">
-      <h1>Let's keep in touch!</h1>
-      <ul class="wrapper">
-        <a href="https://github.com/krischnn" target="_blank">
-          <li class="icon github">
-            <span class="tooltip">Github</span>
-            <span><i class="fab fa-github"></i></span>
-          </li>
-        </a>
-        <a href="https://krischnn.github.io/X-Twitter-Mask/" target="_blank">
-          <li class="icon twitter">
-            <span class="tooltip">Visit my first project!</span>
-            <span><i class="fab fa-x-twitter"></i></span>
-          </li>
-        </a>
-        <a href="#">
-          <li class="icon facebook">
-            <span class="tooltip">Facebook</span>
-            <span><i class="fab fa-facebook-f"></i></span>
-          </li>
-        </a>
-        <a href="#">
-          <li class="icon instagram">
-            <span class="tooltip">Instagram</span>
-            <span><i class="fab fa-instagram"></i></span>
-          </li>
-        </a>
-        <a href="#">
-          <li class="icon youtube">
-            <span class="tooltip">Youtube</span>
-            <span><i class="fab fa-youtube"></i></span>
-          </li>
-        </a>
-      </ul>
+    <div class="newsletter">
+      <div class="subCont">
+        <span>Subscribe to our</span>
+        <h1>Newsletter!</h1>
+      </div>
+      <div class="email">
+        <div class="spanHolder">
+          <span class="spanEmail">Your email address</span>
+        </div>
+        <form id="emailForm" action="#" method="POST">
+          <div class="inputHolder">
+            <input class="emailInput" maxlength="30" name="email" autocomplete="off" type="email" required>
+          </div>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
     </div>
-    <div class="desktopApp">
-      <div class="outerStoreCont">
-        <h2>Download now</h2>
-        <h1>Our new desktop app!</h1>
-        <div class="storeCont">
-          <a href="#"><img class="appStore" src="pics/apple.svg" alt="Apple store icon"></a>
-          <a href="#"><img class="googleStore" src="pics/google.svg" alt="Google play store icon"></a>
+    <div class="colRow">
+      <div class="socialIcons">
+        <h1>Let's keep in touch!</h1>
+        <ul class="wrapper">
+          <a href="https://github.com/krischnn" target="_blank">
+            <li class="icon github">
+              <span class="tooltip">My Github</span>
+              <span><i class="fab fa-github"></i></span>
+            </li>
+          </a>
+          <a href="https://krischnn.github.io/X-Twitter-Mask/" target="_blank">
+            <li class="icon twitter">
+              <span class="tooltip">Visit my first project!</span>
+              <span><i class="fab fa-x-twitter"></i></span>
+            </li>
+          </a>
+          <a href="#">
+            <li class="icon facebook">
+              <span class="tooltip">Facebook</span>
+              <span><i class="fab fa-facebook-f"></i></span>
+            </li>
+          </a>
+          <a href="#">
+            <li class="icon instagram">
+              <span class="tooltip">Instagram</span>
+              <span><i class="fab fa-instagram"></i></span>
+            </li>
+          </a>
+          <a href="#">
+            <li class="icon youtube">
+              <span class="tooltip">Youtube</span>
+              <span><i class="fab fa-youtube"></i></span>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="desktopApp">
+        <div class="outerStoreCont">
+          <h2>Download now</h2>
+          <h1>Our desktop app!</h1>
+          <div class="storeCont">
+            <a href="#"><img class="appStore" src="pics/apple.svg" alt="Apple store icon"></a>
+            <a href="#"><img class="googleStore" src="pics/google.svg" alt="Google play store icon"></a>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-    <div class="newsletter">
-
-    </div>
-    <div class="policy"></div>
-    <div class="copyright"></div>
+    <div class="policy">
+      <nav>
+        <a href="#">
+              <span>About</span>
+          </a>
+          <a href="#">
+              <span>Help Center</span>
+          </a>
+          <a href="#">
+              <span>Terms of Service</span>
+          </a>
+          <a href="#">
+              <span>Privacy Policy</span>
+          </a>
+          <a href="#">
+              <span>Accessibility</span>
+          </a>
+          <a href="#">
+              <span>Ads info</span>
+          </a>
+          <a href="#">
+              <span>Careers</span>
+          </a>
+          <a href="#">
+              <span>Advertising</span>
+          </a>
+          <a href="#">
+              <span>Marketing</span>
+          </a>
+          <a href="#">
+              <span>Developers</span>
+          </a>
+          <a href="#">
+              <span>Directory</span>
+          </a>
+          <a href="#">
+              <span>Settings</span>
+          </a>
+          <div>
+              <span class="credits" onclick="credit()">©</span><span>2024 Twitter Corp.</span>
+          </div>
+      </nav>
+  </div>
 
   </footer>
 </body>

@@ -26,6 +26,9 @@
 html{
     scroll-behavior: smooth;
 }
+a{
+    text-decoration: none;
+}
 body, html{
     width: 100%;
     height: 100%;
@@ -175,18 +178,18 @@ body, html{
 .slikaBtn, .meniBtn1, .meniBtn2, .meniBtn3, .meniBtn4, .profilBtn{
     height:30px;
     width:200px;
-    font-weight: 700;
     cursor: pointer;
     border:none;
     background-color: #111;
     color:white;
     font-size:16px;
     font-family: oxygen1;
-    font-weight:600;
+    font-weight:400;
     border-radius:16px;
     position: relative;
 }
 .meniBtn1:hover, .meniBtn2:hover, .meniBtn3:hover{
+    
     transition-duration: 0.2s;
     color: var(--twitterC);
 }
@@ -239,7 +242,6 @@ body, html{
     border-radius:10px;
     top:30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    
 }
 .dropNaslov, .drop1, .drop2, .drop3, .drop4{
     font-size:15px;
@@ -290,7 +292,7 @@ body, html{
 .drop4:hover{
     color: rgb(126, 36, 182);
 }
-
 .dropDown span{
     margin-left:5px; 
 }
+

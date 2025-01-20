@@ -10,6 +10,8 @@ The theme of my project is the Twitter logo. As you can guess, I have created Tw
 
 I used the original Twitter color in the page design, but I also added an option to change the color to your preferred one.
 
+To make things more interesting, I created a drawing animation for the Bézier curve, where users can control the animation speed.
+
 These pictures are free to download, so you can use them for your own projects.
 
 The website contains four pages: a home page and one page for each picture.

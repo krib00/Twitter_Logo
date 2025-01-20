@@ -85,7 +85,7 @@
         font-size: 15px !important;
     }
     .arrowSvg, .slikaBtn svg, .themeCont svg, .profilSvg{
-        display:none !important;
+        display: none !important;
     }
     .profilModal, .profilModal h2, .crta{
         max-width:130px !important;

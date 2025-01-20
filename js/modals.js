@@ -1,9 +1,11 @@
 let modal;
+let textInner1;
 document.addEventListener('DOMContentLoaded', function () {
 
     modal = document.querySelector(".speedModal");
     const range = document.querySelector('.speedInp');
     const output = document.querySelector('.output');
+    textInner1 = document.querySelector('.textInner1');
     output.textContent = 'Medium'; // default, se izve samo enkrat, na začetku
     window.speed = 2.5; // default
     range.addEventListener('input', function () {
@@ -37,13 +39,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     });
+    
 
 });
 
 function openSpeed() {
     modal.classList.add("modalShown");
+    textInner1.classList.remove("modalShown");
 }
 function closeSpeed() {
     modal.classList.remove("modalShown");
+    textInner1.classList.add("modalShown");
 }
 

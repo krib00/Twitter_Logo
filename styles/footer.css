@@ -162,6 +162,7 @@ footer{
   }
 
   /* INPUT - start */
+  
   .email{ 
     position: relative;
     border: 1px solid white;
@@ -238,7 +239,8 @@ footer{
   padding:10px;
   cursor: pointer;
   margin:9px;
-  z-index:10;
+  z-index:100;
+  user-select: none;
 }
 .email button:hover{
   background-color: white;

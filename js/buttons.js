@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     const btnSlika = document.querySelector('.slikaBtn')
     const btnBezier = document.getElementById('btnBezier');
     const btnPNG = document.getElementById('btnPNG');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const canvasCont = document.querySelector('.canvasCont');
     const svgCont = document.querySelector('.svgCont');
     const pngCont = document.querySelector('.pngCont');
-    
+
     const downloadPic = document.querySelector('.picCont');
     const downloadPic2 = document.querySelector('.picCont2');
     const downloadPic3 = document.querySelector('.picCont3');
@@ -85,6 +85,21 @@ document.addEventListener('DOMContentLoaded', function () {
     pngCont.addEventListener('mouseleave', function () {
         downloadPic3.classList.remove("downShown");
     });
+
+    const dropDown = document.querySelector(".dropDown");
+
+    dropDown.addEventListener("click", function (event) {
+        const clickedElement = event.target.closest("li");
+
+        if (clickedElement) {
+            dropDown.querySelectorAll("ul > li").forEach(el => el.classList.remove("dropActive"));
+
+            clickedElement.classList.add("dropActive");
+        }
+    });
+
+
+
 
 });
 

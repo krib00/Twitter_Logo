@@ -30,6 +30,7 @@
     display:flex;
     transition-duration: 0.2s;
     position: relative;
+    justify-content: center;
 }
 .canvasCont:hover{
     transition-duration: 0.2s;
@@ -90,11 +91,51 @@
     border-radius:20px;
     font-size:15px;
     transition-duration: 0.2s;
-    margin-top:5px;
     font-family: oxygen1;
     font-weight:500;
+}
+.animationBtn{
+    margin-bottom: 10px;
 }
 .animationBtn:hover, .speedBtn:hover{
     background-color: var(--twitterC);
     transition-duration: 0.2s;
+}
+.textInner1{
+    justify-content: center;
+    align-items: center;
+    display:none;
+    flex-direction: column;
+}
+.row1{
+    display:flex;
+    flex-direction: row;
+    width:80%;
+    gap:20%;
+}
+.text1{
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 16px;
+    padding:30px;
+    width: 700px;
+    min-height: 500px;
+}
+.text1 h1{
+    font-family: twitter1;
+    font-size:36px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--twitterC);
+    margin-bottom:25px;
+}
+.text1 li{
+    font-family: oxygen1;
+    color:#111;
+    font-size:22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+.text1 ul{
+    margin-bottom:25px;
 }

@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
         } else {
-            swal("Error", "Please input a valid email.", "error");
+            swal("Error", "Please provide a valid email.", "error");
         }
     });
 });

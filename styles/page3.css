@@ -13,6 +13,7 @@
     width:520px;
     display:flex;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 .pngCont:hover{
@@ -45,4 +46,39 @@
     display: none;
     font-family: oxygen1;
     font-weight:500;
+}
+.row3{
+    display:flex;
+    flex-direction: row;
+    width:80%;
+    gap:20%;
+}
+.text3{
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 16px;
+    padding:30px;
+    width: 700px;
+    min-height: 500px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text3 h1{
+    font-family: twitter1;
+    font-size:36px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--twitterC);
+    margin-bottom:25px;
+}
+.text3 li{
+    font-family: oxygen1;
+    color:#111;
+    font-size:22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+.text3 ul{
+    margin-bottom:25px;
 }

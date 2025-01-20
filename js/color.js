@@ -4,6 +4,3 @@ function colorSwitch(primary) {
   bezier(primary);
 }
 
-function credit() {
-  swal("Credits", "Made by: Kristijan Boben\nProfessor: Boštjan Vouk\nMade with: Html, CSS, JavaScript\nGithub: Click here!", "info");
-}

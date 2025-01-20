@@ -21,7 +21,7 @@
     font-weight: 700 !important;
     margin-bottom:25px !important;
 }
-.swal-text{
+.swal-text, .swal-content__div{
     font-family: oxygen1 !important; 
     user-select: none;
     color: #111 !important;
@@ -42,3 +42,10 @@
 .swal-icon--success__line{
     background-color:var(--twitterC) !important; 
 }
+.github-link {
+    text-decoration: none;
+    color: var(--twitterC);
+  }
+  .github-link:hover {
+    text-decoration: underline;
+  }

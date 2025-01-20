@@ -1,26 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const emailInput = document.querySelector(".emailInput");
+
     document.querySelector(".email").addEventListener("click", activeInput);
     document.querySelector(".email").addEventListener("focusin", activeInput);
 
     function activeInput() {
         const email = document.querySelector(".email");
-        const emailInput = document.querySelector(".emailInput");
         const span = document.querySelector(".spanEmail");
 
-        // obarva border v modro
         email.classList.add("emailMod");
-        // obarva ime v modro
         span.classList.add("spanMod");
 
-        // fokus na input kadar kliknes na DIV
         emailInput.focus();
 
-        function handleClickOutside(event) { // preveri ce kliknes izven diva
+        function handleClickOutside(event) {
             if (!email.contains(event.target)) {
                 email.classList.remove("emailMod");
                 span.classList.remove("spanMod");
 
-                // doda spanMod2 samo takrat, ko input ni prazen in div je nefokusiran
                 if (emailInput.value.length > 0) {
                     span.classList.add("spanMod2");
                 } else {
@@ -34,25 +31,51 @@ document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener("focusin", handleClickOutside);
     }
 
-    document.getElementById("emailForm").addEventListener("submit", function(event) {
+    const submitBtn = document.querySelector(".submitBtn");
+
+    submitBtn.addEventListener("click", (event) => {
         event.preventDefault();
+        
+        const inputValue = emailInput.value.trim().toLowerCase();
 
-        const emailInput = document.querySelector(".emailInput");
-
-        if (emailInput.checkValidity()) {
+        if (inputValue === "credits" || inputValue === "credit") {
+            credits();
+            document.querySelectorAll("input").forEach(input => {
+                input.value = "";
+            });
+        }
+        else if (emailInput.value === "") {
+            swal("Empty", "Please provide the email into the field.", "error");
+        } else if (!emailInput.value.includes("@")) {
+            swal("Invalid email", "Please include '@' in your email address.", "error");
+        } else if (emailInput.value.split("@")[1] === undefined || emailInput.value.split("@")[1] === "") {
+            swal("Invalid email", "Please provide a valid domain after '@'.", "error");
+        } else if (emailInput.checkValidity()) {
             swal("Subscribed!", "You will now be notified about the latest updates and promotions. Stay tuned!", "success").then(() => {
                 document.querySelectorAll("input").forEach(input => {
                     input.value = "";
-                }); 
+                });
             });
+        } else {
+            swal("Error", "Please input a valid email.", "error");
         }
-        else{
-            if (inputValue === "credits" || inputValue === "credit") { 
-                credit();
-            } 
-        }
-
-        
-        handleClickOutside("click");
     });
 });
+
+function credits() {
+    swal({
+        title: "Credits",
+        icon: "info",
+        content: {
+            element: "div",
+            attributes: {
+                innerHTML: `
+                Made by: Kristijan Boben<br>
+                Professor: Boštjan Vouk<br>
+                Made with: Html, CSS, JavaScript<br>
+                Github: <a href="https://github.com/krischnb" target="_blank" class="github-link">Click here!</a>
+            `,
+            },
+        },
+    });
+}

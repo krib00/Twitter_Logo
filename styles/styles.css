@@ -280,18 +280,6 @@ body, html{
 .drop1:hover, .drop2:hover, .drop3:hover, .drop4:hover{
     opacity: 1;
 }
-.drop1:hover{
-    color: rgb(3, 169, 244);
-}
-.drop2:hover{
-    color: rgb(168, 32, 32);
-}
-.drop3:hover{
-    color: rgb(40, 148, 36);
-}
-.drop4:hover{
-    color: rgb(126, 36, 182);
-}
 .dropDown span{
     margin-left:5px; 
 }

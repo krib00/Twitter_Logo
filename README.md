@@ -21,10 +21,10 @@ The website contains four pages: a home page and one page for each picture.
 ![image](https://github.com/user-attachments/assets/d3bacf04-9c71-46af-b875-26786e24c213)
 
 3. Page (SVG image)
-![image](https://github.com/user-attachments/assets/887778d8-5b91-4cbc-b1e3-73620ceb9a3e)
+![image](https://github.com/user-attachments/assets/9115ed07-34fe-4d51-997c-0d42aa5eab3f)
 
 4. Page (PNG image)
-![image](https://github.com/user-attachments/assets/30e2a877-cc35-464a-9f0a-d859d12c97bc)
+![image](https://github.com/user-attachments/assets/887778d8-5b91-4cbc-b1e3-73620ceb9a3e)
 
 Footer:
 ![image](https://github.com/user-attachments/assets/c669b44b-d0e6-4e0e-9277-e4f24cf81a42)

@@ -17,8 +17,6 @@ These pictures are free to download, so you can use them for your own projects.
 The website contains four pages: a home page and one page for each picture.
 
 1st. page (Home page)
-Sigma: ![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Ftwo-men-kissing-gifs&psig=AOvVaw1HsKIM3DURPtROkDiWKIzY&ust=1737536480716000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODGwPe5hosDFQAAAAAdAAAAABAE)
-
 ![image](https://github.com/user-attachments/assets/ec0b7ac5-e496-49ca-84c9-362e3dfbea13)
 
 2nd. Page (Bezier Curve)
